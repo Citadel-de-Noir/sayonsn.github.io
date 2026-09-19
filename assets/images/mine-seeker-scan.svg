@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" role="img" aria-labelledby="title desc">
+<title id="title">Recorded mine-seeker target</title><desc id="desc">Polar diagram redrawn from a manual scan log. A reported target is at 121 degrees and 25.75 centimeters, with estimated width 4.51 centimeters. Zero degrees is right, 90 forward, and 180 left.</desc>
+<rect width="560" height="400" fill="#07120c"/>
+<g font-family="Arial,sans-serif"><text x="28" y="33" fill="#4ade80" font-size="11" letter-spacing="2">RECORDED SCAN / CPRE 288</text><text x="28" y="61" fill="#e9fff0" font-size="20" font-weight="700">From a measurement to a decision.</text></g>
+<g fill="none" stroke="#254632" stroke-width="1"><path d="M70 315 A210 210 0 0 1 490 315"/><path d="M140 315 A140 140 0 0 1 420 315"/><path d="M210 315 A70 70 0 0 1 350 315"/><path d="M55 315H505 M280 315V91 M280 315L131.5 166.5 M280 315L428.5 166.5"/></g>
+<g font-family="Arial,sans-serif" font-size="11" fill="#91a89a"><text x="31" y="320">180°</text><text x="511" y="320">0°</text><text x="268" y="90">90°</text><text x="354" y="308">10 cm</text><text x="424" y="308">20 cm</text><text x="466" y="289">30 cm</text></g>
+<path d="M280 315L187.16 160.50" stroke="#4ade80" stroke-width="2" stroke-dasharray="5 5"/>
+<circle cx="187.16" cy="160.50" r="16" fill="#4ade80" opacity=".12"/><circle cx="187.16" cy="160.50" r="6" fill="#4ade80"/>
+<path d="M187.16 160.50L216 139H339" fill="none" stroke="#4ade80"/>
+<g font-family="Arial,sans-serif"><text x="223" y="128" fill="#e9fff0" font-size="13">121° · 25.75 cm</text><text x="223" y="156" fill="#91a89a" font-size="11">Estimated width: 4.51 cm</text></g>
+<rect x="265" y="303" width="30" height="25" rx="7" fill="#112b1a" stroke="#4ade80"/><path d="M280 307L274 317H286Z" fill="#4ade80"/>
+<g font-family="Arial,sans-serif"><text x="280" y="354" text-anchor="middle" fill="#91a89a" font-size="11">CYBOT / FORWARD AT 90°</text><text x="28" y="384" fill="#72907c" font-size="10">Telemetry illustration · not a live sensor display</text></g></svg>
