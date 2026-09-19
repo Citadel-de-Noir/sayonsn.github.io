@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sayon Saha - Computer and Electrical Engineering Portfolio" />
+  <title>Sayon Saha | Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="grid-overlay"></div>
+
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="Home">SS<span>.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#bio" class="nav-link">Bio</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#organizations" class="nav-link">Organizations</a>
+      <a href="#courses" class="nav-link">Courses</a>
+      <a href="#hobbies" class="nav-link">Hobbies</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="section hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Computer Engineering × Electrical Engineering</p>
+        <h1>
+          I build at the edge of
+          <span class="gradient-text">hardware & software.</span>
+        </h1>
+        <p class="hero-description">
+          Hi! I'm Sayon Saha, a student engineer interested in Electronics, VLSI, 
+          Computer Architecture, Semiconductor Design, and turning sketches into working machines.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">Explore Projects</a>
+          <a class="button secondary" href="#courses">View Coursework</a>
+        </div>
+
+        <div class="social-row">
+          <a href="#">GitHub ↗</a>
+          <a href="#">LinkedIn ↗</a>
+          <a href="#">Résumé ↗</a>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true">
+          <span></span>
+          SCROLL TO EXPLORE
+        </div>
+      </div>
+
+      <div class="profile-panel reveal">
+        <div class="profile-orbit">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="profile-frame">
+            <img
+              src="https://placehold.co/900x1050/08110d/4ade80?text=Add+Profile+Photo"
+              alt="Profile placeholder"
+            />
+            <div class="profile-tag">ENGINEER • BUILDER • LEARNER</div>
+          </div>
+        </div>
+        <!-- <p class="edit-hint">
+          Replace with <code>assets/images/profile.jpg</code>
+        </p> -->
+      </div>
+    </section>
+
+    <!-- BIO Section -->
+    <section id="bio" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 / Bio</p>
+        <h2>More than a line on a resume.</h2>
+      </div>
+
+      <div class="bio-grid">
+        <article class="glass-card reveal tilt-card">
+          <h3>About me</h3>
+          <p>
+            I'm a student at Iowa State University double majoring in Computer Engineering and Electrical Engineering who enjoys
+            working across the boundary between code and physical systems. I'm especially
+            interested in VLSI, Semiconductor Design, Computer Architecture, Audio-Visual Systems, and Power Electronics.
+          </p>
+          <p>
+            I like projects where the product is a not just a solution to a problem, but also a discovery that has soul and a personal connection, that 
+            combines both technical and creative elements, and sometimes just a silly "What If" given shape.
+          </p>
+        </article>
+
+        <div class="stats-grid">
+          <article class="stat-card reveal">
+            <span>Primary interests</span>
+            <strong>VLSI + Embedded Systems
+              Chipsets 
+
+            </strong>
+          </article>
+          <article class="stat-card reveal">
+            <span>Engineering tools</span>
+            <strong>KiCad • Git • Linux <br>
+              LTSpice • Cadence • Questa Sim <br>
+              MATLAB • Quartus • SpringBoot
+            </strong>
+          </article>
+          <article class="stat-card reveal">
+            <span>Programming</span>
+            <strong>C • C++ • Java <br>
+              Bash • MySQL <br>
+              Verilog • VHDL  
+            </strong>
+          </article>
+          <article class="stat-card reveal">
+            <span>Approach</span>
+            <strong>Design → Build → Debug</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Section -->
+
+    <section id="courses" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">05 / Coursework</p>
+        <h2>What was, what is and what will be</h2>
+        <p>
+          Keeping a living record of current classes, what I've completed before,
+          and what I'm planning to take on.
+        </p>
+      </div>
+
+      <div class="course-tabs reveal" role="tablist" aria-label="Course groups">
+        <button class="course-tab active" data-course-tab="current" role="tab" aria-selected="true">Current Courses</button>
+        <button class="course-tab" data-course-tab="completed" role="tab" aria-selected="false">Completed Courses</button>
+        <button class="course-tab" data-course-tab="up next" role="tab" aria-selected="false">Up Next</button>
+      </div>
+
+      <div class="course-panel active" data-course-panel="current">
+        <div class="course-list">
+          <article class="course-card reveal">
+            <div class="course-topline">
+              <div>
+                <span class="course-status">IN PROGRESS</span>
+                <span class="course-code">COMS 3090</span>
+                <h3>Software Development Practices</h3>
+              </div>
+              <button class="course-toggle" aria-expanded="false" aria-label="Expand course">+</button>
+            </div>
+            <div class="course-details">
+              <div>
+                <h4>Course overview</h4>
+                <p>We will explore modern software development practices and methodologies in a team based semester-long project setting.</p>
+              </div>
+              <div>
+                <h4>What I'm doing</h4>
+                <p>
+                  Building an Android application with a team of 4 people, using version
+                  control, APIs, backend integration, frontend optimization, testing, and collaborative software workflows.
+                </p>
+              </div>
+              <div>
+                <h4>Tools / Skills</h4>
+                <div class="tag-row"><span>Java</span><span>Android</span><span>Git</span><span>APIs</span><span>SpringBoot</span><span>MySQL</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-topline">
+              <div>
+                <span class="course-status">IN PROGRESS</span>
+                <span class="course-code">CPRE 3810</span>
+                <h3>Computer Organization and Assembly Level Programming</h3>
+              </div>
+              <button class="course-toggle" aria-expanded="false" aria-label="Expand course">+</button>
+            </div>
+            <div class="course-details">
+              <div>
+                <h4>Course overview</h4>
+                <p>Introduction to Computer Architecture and Organization, instruction set design and assembly language programming,
+                  control flow instruction, procedure calls, stack management, datapath and control, processor design, memory and I/O systems
+                </p>
+              </div>
+              <div>
+                <h4>What I'm doing</h4>
+                <p>
+                  Learning assembly language programming, understanding computer architecture, and exploring the design of processors and memory systems along with data 
+                  pipelining and instruction-level parallelism orders. Designing, validating and evaluating three RISC-V processors(single-cycle, software-scheduled pipeline,
+                  and hardware-scheduled pipeline) in a team of 2 by the end of the semester.
+                </p>
+              </div>
+              <div>
+                <h4>Tools / Skills</h4>
+                <div class="tag-row"><span>Assembly</span><span>RISC-V</span><span>Computer Architecture</span><span>Pipelining</span>
+                <span>Datapaths</span><span>CPU Design Basics</span><span>VHDL</span><span></span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-topline">
+              <div>
+                <span class="course-status">IN PROGRESS</span>
+                <span class="course-code">CPRE 3300</span>
+                <h3>Integrated Systems</h3>
+              </div>
+              <button class="course-toggle" aria-expanded="false" aria-label="Expand course">+</button>
+            </div>
+            <div class="course-details">
+              <div>
+                <h4>Course overview</h4>
+                <p>
+                  • Introduction to semiconductor technology, integrated circuit design, and digital systems.<br> • Modeling of IC devices including BJTs, MOSFETs,
+                  Diodes, Thyristors etc. <br> • Analysis of both digital and analog building blocks
+                </p>
+              </div>
+              <div>
+                <h4>What I'm doing</h4>
+                <p>
+                  • Learn semiconductor physics, device modeling, and IC fabrication.<br>• Explore digital and analog circuit design, including logic gates, flip-flops, amplifiers, and filters.
+                  <br>• Learn physical layout, circuit simulation, digital building blocks, and digital synthesis.<br>• Analysis and design 
+                  of analog building blocks. <br>• Design and implement a complete integrated system using both digital and analog components by end of semester.
+                </p>
+              </div>
+              <div>
+                <h4>Tools / Skills</h4>
+                <div class="tag-row"><span>Semiconductor Physics</span><span>Device Modeling</span><span>IC Fabrication</span><span>Digital Component Design</span><span>Analog Component Design</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-topline">
+              <div>
+                <span class="course-status">IN PROGRESS</span>
+                <span class="course-code">EE 3030</span>
+                <h3>Energy Systems and Power Electronics</h3>
+              </div>
+              <button class="course-toggle" aria-expanded="false" aria-label="Expand course">+</button>
+            </div>
+            <div class="course-details">
+              <div>
+                <h4>Course overview</h4>
+                <p>
+                  • Structure, operation and economic optimization of energy systems <br> • Inductors, transformers, and power converters <br> • Power electronics applications in energy systems
+                </p>
+              </div>
+              <div>
+                <h4>What I'm doing</h4>
+                <p>
+                  • Learn system operations and their variations <br> • Mutual inductance, synchronous generators, and three phase circuit analysis and power calculations <br>
+                  • Network calculations, power flow and associated numerical methods <br> • Two-port circuits, voltage regulation, resonance and power factor correction <br>
+                  • Power electronics applications in power supplies and motor drives
+                </p>
+              </div>
+              <div>
+                <h4>Tools / Skills</h4>
+                <div class="tag-row"><span>Energy Systems</span><span>Power Electronics</span><span>Power Calculations</span><span>Network Analysis</span><span>Power Factor Correction</span><span>Power Supplies</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-topline">
+              <div>
+                <span class="course-status">IN PROGRESS</span>
+                <span class="course-code">MATH 2650</span>
+                <h3>Calculus III</h3>
+              </div>
+              <button class="course-toggle" aria-expanded="false" aria-label="Expand course">+</button>
+            </div>
+            <div class="course-details">
+              <div>
+                <h4>Course overview</h4>
+                <p>
+                  • Multivariable calculus, including partial derivatives, multiple integrals, and vector calculus. <br> • Applications in physics, engineering, and optimization problems.
+                </p>
+              </div>
+              <div>
+                <h4>What I'm doing</h4>
+                <p>
+                  • Study the theory and application of multivariable calculus in various fields. <br> • Geometry of space vectors, coordinate systems
+                </p>
+              </div>
+              <div>
+                <h4>Tools / Skills</h4>
+                <div class="tag-row"><span>Calculus</span><span>Vector Analysis</span><span>Optimization</span><span>Physics Applications</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-topline">
+              <div>
+                <span class="course-status">IN PROGRESS</span>
+                <span class="course-code">ECON 1010</span>
+                <h3>Principles of Microeconomics</h3>
+              </div>
+              <button class="course-toggle" aria-expanded="false" aria-label="Expand course">+</button>
+            </div>
+            <div class="course-details">
+              <div>
+                <h4>Course overview</h4>
+                <p>
+                  • Supply and demand, market equilibrium, and elasticity. <br> • Consumer and producer surplus, and market efficiency. <br> • Resource allocation, competition and economic strategic behavior
+                </p>
+              </div>
+              <div>
+                <h4>What I'm doing</h4>
+                <p>
+                  • Learning about the principles of microeconomics, including supply and demand, market equilibrium, elasticity, consumer and producer surplus, and market efficiency. <br> 
+                  • Exploring resource allocation, opportunity costs, comparative and absolute advantage. <br> • Marginal analysis, theories of production and consumption, and market structures. <br> 
+                  • Understanding the role of government in microeconomics, including taxation, regulation, and public goods.
+                </p>
+              </div>
+              <div>
+                <h4>Tools / Skills</h4>
+                <div class="tag-row"><span>Supply and Demand</span><span>Market Equilibrium</span><span>Elasticity</span><span>Consumer Surplus</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- Completed Courses -->
+      <div class="course-panel" data-course-panel="completed" hidden>
+        <div class="semester-stack">
+          <section class="semester-block reveal" aria-labelledby="fall-2024-heading">
+            <div class="semester-heading">
+              <span class="course-status">Completed</span>
+              <h3 id="fall-2024-heading">Fall 2024</h3>
+            </div>
+            <div class="completed-grid">
+             <article class="completed-course">
+                <div><span class="course-code">CPRE 2880</span><h3>Add Completed CPRE Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Use this section as a compact record of your technical progression.</p>
+                <div class="tag-row"><span>Systems</span><span>Design</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">MATH 2070</span><h3>Add Completed MATH Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Include any relevant math courses that support your engineering skills.</p>
+                <div class="tag-row"><span>Calculus</span><span>Linear Algebra</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">EE 2300</span><h3>Add Completed EE Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Highlight any additional electrical engineering courses that demonstrate your expertise.</p>
+                <div class="tag-row"><span>Electronics</span><span>Signal Processing</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">CPRE 2320</span><h3>Add Completed CPRE Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Showcase any other computer engineering courses that are relevant to your portfolio.</p>
+                <div class="tag-row"><span>Embedded Systems</span><span>Microcontrollers</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">CPRE 3100</span><h3>Add Completed MATH Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Include any additional math courses that have contributed to your engineering knowledge.</p>
+                <div class="tag-row"><span>Differential Equations</span><span>Probability</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">PHYS 2320</span><h3>Add Completed EE Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>List any further electrical engineering courses that are significant to your skill set.</p>
+                <div class="tag-row"><span>Control Systems</span><span>Power Electronics</span></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="semester-block reveal" aria-labelledby="spring-2025-heading">
+            <div class="semester-heading">
+              <span class="course-status">Completed</span>
+              <h3 id="spring-2025-heading">Spring 2025</h3>
+            </div>
+            <div class="completed-grid">
+             <article class="completed-course">
+                <div><span class="course-code">CPRE `1860</span><h3></h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Systems</span><span>Design</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">MATH 1660</span><h3>/h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Calculus</span><span></span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">COMS 2270</span><h3></h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Electronics</span><span>Signal Processing</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">ENGL 2500</span><h3></h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Writing</span><span>Communication</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">CPRE 3100</span><h3>Add Completed MATH Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Include any additional math courses that have contributed to your engineering knowledge.</p>
+                <div class="tag-row"><span>Differential Equations</span><span>Probability</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">PHYS 2320</span><h3>Add Completed EE Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>List any further electrical engineering courses that are significant to your skill set.</p>
+                <div class="tag-row"><span>Control Systems</span><span>Power Electronics</span></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="semester-block reveal" aria-labelledby="fall-2025-heading">
+            <div class="semester-heading">
+              <span class="course-status">Completed</span>
+              <h3 id="fall-2025-heading">Fall 2025</h3>
+            </div>
+            <div class="completed-grid">
+              <article class="completed-course">
+                <div><span class="course-code">COMS 2280</span><h3>Introduction to Data Structures</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Systems</span><span>Design</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">CPRE 2810</span><h3>Digital Logic</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Calculus</span><span>Linear Algebra</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">EE 2010</span><h3>Electric Circuits</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Electronics</span><span>Signal Processing</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">MATH 2670</span><h3>Elementary Differential Equations and Laplace Transforms</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Embedded Systems</span><span>Microcontrollers</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">PHIL 3430</span><h3>Ethics of Computing and Artificial Intelligence</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Differential Equations</span><span>Probability</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">HIST 2010</span><h3>Introduction to Western Civilization I</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait  .</p>
+                <div class="tag-row"><span>Control Systems</span><span>Power Electronics</span></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="semester-block reveal" aria-labelledby="spring-2026-heading">
+            <div class="semester-heading">
+              <span class="course-status">Completed</span>
+              <h3 id="spring-2026-heading">Spring 2026</h3>
+            </div>
+            <div class="completed-grid">
+              <article class="completed-course">
+                <div><span class="course-code">CPRE 2880</span><h3>Embedded Systems I</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Introduction to embedded systems design and programming. Built a implementation of a underwater mine clearing bot using TM4C123GH6PM MCU, sensors including IR, Sonar, Bump
+                  etc. and a working live monitoring system. The chassis was a iRobot Roomba, with the whole system including both an Automatic and a Manual mode.
+                </p>
+                <div class="tag-row"><span>Embedded Systems</span><span>Design</span><span>MCU Configuration</span><span>Sensor Setup and Calibration</span>
+                <span>Pathfinding</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">MATH 2070</span><h3>Matrices and Linear Algebra</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Systems of Linear Equations, Vector Spaces, Linear Transformations, Eigenvalues and Eigenvectors, Orthogonality, and Applications in Engineering and Computer Science.</p>
+                <div class="tag-row"><span>Calculus</span><span>Linear Algebra</span><span>Optimization</span><span>Systems of Equations</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">EE 2300</span><h3>Electronic Circuits and Systems</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Frequency domain characterization, transfer functions, sinusoidal steady-state analysis, and circuit design. Time domain models of linear and
+                  nonlinear circuits. OpAmps, A/D and D/A converters, filters, diodes characteristics and model analysis. Built a three phase audio crossover as a
+                  final project.
+                </p>
+                <div class="tag-row"><span>Circuit Analysis</span><span>Filter Design</span><span>Signal Processing</span><span>Oscillators and Transistors</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">CPRE 2320</span><h3>Professional and Ethical Issues in Electrical and Computer Engineering</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Soft skills, including communication, teamwork, and ethical decision-making in engineering practice. Case studies and real-world applications
+                  illustrating ethical decision making in an engineering context.
+                </p>
+                <div class="tag-row"><span>Communication</span><span>Ethics</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">CPRE 3100</span><h3>Theoretical Foundations of Computer Engineering</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Propositional logic and methods of proof, basic discrete mathematics, and algorithmic thinking. Mathematical induction and recurrence
+                  relations, functions and relations. Trees and graphs, and their applications in computer engineering.
+                </p>
+                <div class="tag-row"><span>Discrete Mathematics</span><span>Logic</span><span>Proof Techniques</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">PHYS 2320</span><h3>Classical Physics II</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Electric forces and fields, magnetic fields and forces, electromagnetic induction. Circuits and resonance.</p>
+                <div class="tag-row"><span>Classical Physics</span><span>Electromagnetism</span><span>Circuit Analysis</span></div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 / Projects</p>
+        <h2>Built for class. Built because I wanted to.</h2>
+        <p>Projects are separated so recruiters can quickly see independent work versus coursework.</p>
+      </div>
+
+      <div class="project-category">
+        <div class="category-heading reveal">
+          <span class="category-index">A</span>
+          <div>
+            <p class="eyebrow">Personal Projects</p>
+            <h3>Things I chose to build.</h3>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal tilt-card">
+            <div class="project-image">
+              <img src="https://placehold.co/1200x760/07110c/4ade80?text=Personal+Project+01" alt="Custom ESP32 board placeholder" />
+              <span class="project-type">PERSONAL</span>
+            </div>
+            <div class="project-content">
+              <div class="project-number">01</div>
+              <h3>Custom ESP32 Board</h3>
+              <p>
+                Custom microcontroller board covering schematic capture, PCB layout,
+                power regulation, USB, component selection, assembly, and board bring-up.
+              </p>
+              <div class="tag-row"><span>ESP32</span><span>KiCad</span><span>PCB Design</span></div>
+              <div class="project-links"><a href="#">Details →</a><a href="#">GitHub ↗</a></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal tilt-card">
+            <div class="project-image">
+              <img src="https://placehold.co/1200x760/07110c/22c55e?text=Personal+Project+02" alt="Audio system placeholder" />
+              <span class="project-type">PERSONAL</span>
+            </div>
+            <div class="project-content">
+              <div class="project-number">02</div>
+              <h3>2.1 Audio Amplifier System</h3>
+              <p>
+                Custom audio electronics project involving amplifier design, speaker
+                integration, subwoofer integration, enclosure work, and system testing.
+              </p>
+              <div class="tag-row"><span>Analog</span><span>Audio</span><span>PCB</span><span>Electronics</span></div>
+              <div class="project-links"><a href="#">Details →</a><a href="#">GitHub ↗</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="project-category coursework-category">
+        <div class="category-heading reveal">
+          <span class="category-index">B</span>
+          <div>
+            <p class="eyebrow">Coursework Projects</p>
+            <h3>Engineering under constraints.</h3>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal tilt-card">
+            <div class="project-image">
+              <img src="https://placehold.co/1200x760/07110c/16a34a?text=Coursework+Project+01" alt="Underwater mine seeker placeholder" />
+              <span class="project-type">COURSEWORK</span>
+            </div>
+            <div class="project-content">
+              <div class="project-number">01</div>
+              <h3>Underwater Mine Seeker</h3>
+              <p>
+                Embedded sensing platform that scans an environment, processes multiple
+                sensor inputs, and identifies potential targets.
+              </p>
+              <div class="tag-row"><span>C</span><span>Sensors</span><span>Embedded</span><span>Servo Control</span></div>
+              <div class="project-links"><a href="#">Details →</a><a href="#">GitHub ↗</a></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal tilt-card">
+            <div class="project-image">
+              <img src="https://placehold.co/1200x760/07110c/15803d?text=Coursework+Project+02" alt="Course project placeholder" />
+              <span class="project-type">COURSEWORK</span>
+            </div>
+            <div class="project-content">
+              <div class="project-number">02</div>
+              <h3>Add Course Project</h3>
+              <p>
+                Duplicate this card for software, embedded, digital logic, circuits,
+                robotics, or other substantial class projects.
+              </p>
+              <div class="tag-row"><span>Tool</span><span>Skill</span><span>Technology</span></div>
+              <div class="project-links"><a href="#">Details →</a><a href="#">GitHub ↗</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">03 / Work Experience</p>
+        <h2>Helping others solve what once felt impossible.</h2>
+        <p>Teaching technical ideas clearly has sharpened how I communicate, diagnose problems, and adapt.</p>
+      </div>
+
+      <div class="experience-grid">
+        <article class="experience-card reveal tilt-card">
+          <div class="experience-topline">
+            <div>
+              <span class="experience-type">ACADEMIC SUPPORT</span>
+              <h3>Peer Tutor — Chemistry &amp; Calculus</h3>
+              <p class="experience-place">Iowa State University</p>
+            </div>
+            <span class="experience-duration">3 semesters</span>
+          </div>
+          <p>
+            Support students in chemistry and calculus through individual guidance, worked examples,
+            and study strategies tailored to how each student learns.
+          </p>
+          <div class="tag-row"><span>Tutoring</span><span>Technical Communication</span><span>Problem Solving</span><span>Mentoring</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CLUBS & ORGANIZATIONS -->
+    <section id="organizations" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">04 / Clubs &amp; Organizations</p>
+        <h2>Building, mentoring, and leading beyond class.</h2>
+        <p>Technical communities at Iowa State and leadership experiences that shaped how I work with teams.</p>
+      </div>
+
+      <div class="organization-grid">
+        <article class="organization-card reveal">
+          <span class="organization-index">01</span>
+          <p class="organization-label">Iowa State University</p>
+          <h3>Audio &amp; Arduino Club</h3>
+          <strong>Mentor &amp; Member</strong>
+          <p>Mentor other builders and contribute to hands-on electronics projects, including amplifiers, Arduino systems, custom boards, and desktop audio builds.</p>
+        </article>
+
+        <article class="organization-card reveal">
+          <span class="organization-index">02</span>
+          <p class="organization-label">Engineering Honor Society</p>
+          <h3>IEEE–Eta Kappa Nu</h3>
+          <strong>Member</strong>
+          <p>Participate in a community centered on academic excellence, professional development, and service in electrical and computer engineering.</p>
+        </article>
+
+        <article class="organization-card reveal">
+          <span class="organization-index">03</span>
+          <p class="organization-label">Professional Organization</p>
+          <h3>IEEE</h3>
+          <strong>Member</strong>
+          <p>Engage with technical events and professional-development opportunities across electrical and computer engineering.</p>
+        </article>
+
+        <article class="organization-card reveal">
+          <span class="organization-index">04</span>
+          <p class="organization-label">Student Leadership</p>
+          <h3>English Club</h3>
+          <strong>Vice President — Public Relations</strong>
+          <p>Led public-relations work and supported the planning and communication behind student programs and events.</p>
+        </article>
+
+        <article class="organization-card reveal">
+          <span class="organization-index">05</span>
+          <p class="organization-label">National Event</p>
+          <h3>7th National English Carnival</h3>
+          <strong>Organizer</strong>
+          <p>Helped organize an event serving more than 2,000 participants from 113 institutions, including guest, hospitality, and technology coordination.</p>
+        </article>
+
+        <article class="organization-card reveal">
+          <span class="organization-index">06</span>
+          <p class="organization-label">Youth Leadership</p>
+          <h3>International Youth Summit</h3>
+          <strong>County Manager</strong>
+          <p>Led a 70-person team, coordinating people and responsibilities across a large youth-led initiative.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section id="hobbies" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">06 / Hobbies</p>
+        <h2>The non-silicon parts.</h2>
+      </div>
+
+      <div class="hobby-grid">
+        <article class="hobby-card reveal"><span>📷</span><h3>Photography</h3><p>Landscapes, travel, architecture, and interesting light.</p></article>
+        <article class="hobby-card reveal"><span>🎨</span><h3>Art</h3><p>Painting and visual design when I want a different kind of problem.</p></article>
+        <article class="hobby-card reveal"><span>📚</span><h3>Books</h3><p>Fantasy, mystery, expansive fictional worlds, and detective stories.</p></article>
+        <article class="hobby-card reveal"><span>🏎️</span><h3></h3><p>Engineering, performance, design, and machines with character.</p></article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+      <div class="contact-card reveal">
+        <div class="contact-pulse"></div>
+        <p class="eyebrow">07 / Contact</p>
+        <h2>Let's build something worth debugging.</h2>
+        <p>Replace the placeholder below with your university or professional email.</p>
+        <a class="button primary" href="mailto:your.email@example.com">your.email@example.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed & built by Sayon Saha.</p>
+    <p>© <span id="year"></span></p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <span>↑</span>
+    <small>TOP</small>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

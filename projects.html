@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal and coursework engineering projects by Sayon Saha." />
+  <title>Projects | Sayon Saha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/hobbies.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="grid-overlay"></div>
+
+  <header class="site-header">
+    <a class="logo" href="index.html#home" aria-label="Home">SS<span>.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="index.html#bio" class="nav-link">Bio</a>
+      <a href="courses.html" class="nav-link">Courses</a>
+      <a href="projects.html" class="nav-link active" aria-current="page">Projects</a>
+      <a href="index.html#experience" class="nav-link">Experience</a>
+      <a href="organizations.html" class="nav-link">Organizations</a>
+      <a href="index.html#hobbies" class="nav-link">Hobbies</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PROJECTS -->
+    <section id="projects" class="section detail-page">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Projects</p>
+        <h1>Built for class. Built because I wanted to.</h1>
+        <p>Projects are separated so recruiters can quickly see independent work versus coursework.</p>
+      </div>
+
+      <div class="project-category">
+        <div class="category-heading reveal">
+          <span class="category-index">A</span>
+          <div>
+            <p class="eyebrow">Personal Projects</p>
+            <h3>Things I chose to build.</h3>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <article id="custom-esp32-board" class="project-card reveal tilt-card">
+            <div class="project-image">
+              <img src="https://placehold.co/1200x760/07110c/4ade80?text=Personal+Project+01" alt="Custom ESP32 board placeholder" />
+              <span class="project-type">PERSONAL</span>
+            </div>
+            <div class="project-content">
+              <div class="project-number">01</div>
+              <h3>Custom ESP32 Board</h3>
+              <p>
+                Custom microcontroller board covering schematic capture, PCB layout,
+                power regulation, USB, component selection, assembly, and board bring-up.
+              </p>
+              <div class="tag-row"><span>ESP32</span><span>KiCad</span><span>PCB Design</span></div>
+              <div class="project-links"><a href="#">Details →</a><a href="#">GitHub ↗</a></div>
+            </div>
+          </article>
+
+          <article id="audio-amplifier" class="project-card reveal tilt-card">
+            <div class="project-image">
+              <img src="https://placehold.co/1200x760/07110c/22c55e?text=Personal+Project+02" alt="Audio system placeholder" />
+              <span class="project-type">PERSONAL</span>
+            </div>
+            <div class="project-content">
+              <div class="project-number">02</div>
+              <h3>2.1 Audio Amplifier System</h3>
+              <p>
+                Custom audio electronics project involving amplifier design, speaker
+                integration, subwoofer integration, enclosure work, and system testing.
+              </p>
+              <div class="tag-row"><span>Analog</span><span>Audio</span><span>PCB</span><span>Electronics</span></div>
+              <div class="project-links"><a href="#">Details →</a><a href="#">GitHub ↗</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="project-category coursework-category">
+        <div class="category-heading reveal">
+          <span class="category-index">B</span>
+          <div>
+            <p class="eyebrow">Coursework Projects</p>
+            <h3>Engineering under constraints.</h3>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <article id="underwater-mine-seeker" class="project-card reveal tilt-card">
+            <div class="project-image">
+              <img src="https://placehold.co/1200x760/07110c/16a34a?text=Coursework+Project+01" alt="Underwater mine seeker placeholder" />
+              <span class="project-type">COURSEWORK</span>
+            </div>
+            <div class="project-content">
+              <div class="project-number">01</div>
+              <h3>Underwater Mine Seeker</h3>
+              <p>
+                Embedded sensing platform that scans an environment, processes multiple
+                sensor inputs, and identifies potential targets.
+              </p>
+              <div class="tag-row"><span>C</span><span>Sensors</span><span>Embedded</span><span>Servo Control</span></div>
+              <div class="project-links"><a href="#">Details →</a><a href="#">GitHub ↗</a></div>
+            </div>
+          </article>
+
+          <article id="course-project" class="project-card reveal tilt-card">
+            <div class="project-image">
+              <img src="https://placehold.co/1200x760/07110c/15803d?text=Coursework+Project+02" alt="Course project placeholder" />
+              <span class="project-type">COURSEWORK</span>
+            </div>
+            <div class="project-content">
+              <div class="project-number">02</div>
+              <h3>Add Course Project</h3>
+              <p>
+                Duplicate this card for software, embedded, digital logic, circuits,
+                robotics, or other substantial class projects.
+              </p>
+              <div class="tag-row"><span>Tool</span><span>Skill</span><span>Technology</span></div>
+              <div class="project-links"><a href="#">Details →</a><a href="#">GitHub ↗</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="section-actions"><a class="button secondary" href="index.html#projects">Back to portfolio &larr;</a></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Designed & built by Sayon Saha.</p>
+    <p>© <span id="year"></span></p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <span>↑</span>
+    <small>TOP</small>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
