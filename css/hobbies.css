@@ -1,0 +1,34 @@
+/* Hobby links and their temporary destination pages. */
+a.hobby-card {
+  display: block;
+}
+
+a.hobby-card:focus-visible,
+.construction-page a:focus-visible,
+body:has(.construction-page) .site-header a:focus-visible {
+  outline: 3px solid var(--emerald);
+  outline-offset: 5px;
+}
+
+.construction-page {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+  padding-top: 130px;
+  padding-bottom: 60px;
+}
+
+.construction-card {
+  width: 100%;
+  max-width: 850px;
+  margin-inline: auto;
+}
+
+.construction-card h1 {
+  margin: 0 0 20px;
+  font-size: clamp(2rem, 7vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -.04em;
+  overflow-wrap: anywhere;
+}

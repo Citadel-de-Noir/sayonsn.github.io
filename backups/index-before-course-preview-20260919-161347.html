@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sayon Saha - Computer and Electrical Engineering Portfolio" />
+  <title>Sayon Saha | Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/hobbies.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="grid-overlay"></div>
+
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="Home">SS<span>.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#bio" class="nav-link">Bio</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="organizations.html" class="nav-link">Organizations</a>
+      <a href="courses.html" class="nav-link">Courses</a>
+      <a href="#hobbies" class="nav-link">Hobbies</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="section hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Computer Engineering × Electrical Engineering</p>
+        <h1>
+          I build at the edge of
+          <span class="gradient-text">hardware & software.</span>
+        </h1>
+        <p class="hero-description">
+          Hi! I'm Sayon Saha, a student engineer interested in Electronics, VLSI, 
+          Computer Architecture, Semiconductor Design, and turning sketches into working machines.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">Explore Projects</a>
+          <a class="button secondary" href="courses.html">View Coursework</a>
+        </div>
+
+        <div class="social-row">
+          <a href="#">GitHub ↗</a>
+          <a href="#">LinkedIn ↗</a>
+          <a href="#">Résumé ↗</a>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true">
+          <span></span>
+          SCROLL TO EXPLORE
+        </div>
+      </div>
+
+      <div class="profile-panel reveal">
+        <div class="profile-orbit">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="profile-frame">
+            <img
+              src="https://placehold.co/900x1050/08110d/4ade80?text=Add+Profile+Photo"
+              alt="Profile placeholder"
+            />
+            <div class="profile-tag">ENGINEER • BUILDER • LEARNER</div>
+          </div>
+        </div>
+        <!-- <p class="edit-hint">
+          Replace with <code>assets/images/profile.jpg</code>
+        </p> -->
+      </div>
+    </section>
+
+    <!-- BIO Section -->
+    <section id="bio" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 / Bio</p>
+        <h2>More than a line on a resume.</h2>
+      </div>
+
+      <div class="bio-grid">
+        <article class="glass-card reveal tilt-card">
+          <h3>About me</h3>
+          <p>
+            I'm a student at Iowa State University double majoring in Computer Engineering and Electrical Engineering who enjoys
+            working across the boundary between code and physical systems. I'm especially
+            interested in VLSI, Semiconductor Design, Computer Architecture, Audio-Visual Systems, and Power Electronics.
+          </p>
+          <p>
+            I like projects where the product is a not just a solution to a problem, but also a discovery that has soul and a personal connection, that 
+            combines both technical and creative elements, and sometimes just a silly "What If" given shape.
+          </p>
+        </article>
+
+        <div class="stats-grid">
+          <article class="stat-card reveal">
+            <span>Primary interests</span>
+            <strong>VLSI + Embedded Systems
+              Chipsets 
+
+            </strong>
+          </article>
+          <article class="stat-card reveal">
+            <span>Engineering tools</span>
+            <strong>KiCad • Git • Linux <br>
+              LTSpice • Cadence • Questa Sim <br>
+              MATLAB • Quartus • SpringBoot
+            </strong>
+          </article>
+          <article class="stat-card reveal">
+            <span>Programming</span>
+            <strong>C • C++ • Java <br>
+              Bash • MySQL <br>
+              Verilog • VHDL  
+            </strong>
+          </article>
+          <article class="stat-card reveal">
+            <span>Approach</span>
+            <strong>Design → Build → Debug</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 / Projects</p>
+        <h2>A sample of what I build.</h2>
+        <p>From custom electronics to embedded systems. Explore the full collection for more personal and coursework projects.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card reveal tilt-card">
+            <div class="project-image">
+              <img src="https://placehold.co/1200x760/07110c/4ade80?text=Personal+Project+01" alt="Custom ESP32 board placeholder" />
+              <span class="project-type">PERSONAL</span>
+            </div>
+            <div class="project-content">
+              <div class="project-number">01</div>
+              <h3>Custom ESP32 Board</h3>
+              <p>
+                Custom microcontroller board covering schematic capture, PCB layout,
+                power regulation, USB, component selection, assembly, and board bring-up.
+              </p>
+              <div class="tag-row"><span>ESP32</span><span>KiCad</span><span>PCB Design</span></div>
+              <div class="project-links"><a href="projects.html#custom-esp32-board">View project &rarr;</a></div>
+            </div>
+          </article>
+        <article class="project-card reveal tilt-card">
+            <div class="project-image">
+              <img src="https://placehold.co/1200x760/07110c/16a34a?text=Coursework+Project+01" alt="Underwater mine seeker placeholder" />
+              <span class="project-type">COURSEWORK</span>
+            </div>
+            <div class="project-content">
+              <div class="project-number">01</div>
+              <h3>Underwater Mine Seeker</h3>
+              <p>
+                Embedded sensing platform that scans an environment, processes multiple
+                sensor inputs, and identifies potential targets.
+              </p>
+              <div class="tag-row"><span>C</span><span>Sensors</span><span>Embedded</span><span>Servo Control</span></div>
+              <div class="project-links"><a href="projects.html#underwater-mine-seeker">View project &rarr;</a></div>
+            </div>
+          </article>
+      </div>
+      <div class="section-actions"><a class="button primary" href="projects.html">View all projects &rarr;</a></div>
+    </section>
+
+    <!-- WORK EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">03 / Work Experience</p>
+        <h2>Helping others solve what once felt impossible.</h2>
+        <p>Teaching technical ideas clearly has sharpened how I communicate, diagnose problems, and adapt.</p>
+      </div>
+
+      <div class="experience-grid">
+        <article class="experience-card reveal tilt-card">
+          <div class="experience-topline">
+            <div>
+              <span class="experience-type">ACADEMIC SUPPORT</span>
+              <h3>Peer Tutor — Chemistry &amp; Calculus</h3>
+              <p class="experience-place">Iowa State University</p>
+            </div>
+            <span class="experience-duration">3 semesters</span>
+          </div>
+          <p>
+            Support students in chemistry and calculus through individual guidance, worked examples,
+            and study strategies tailored to how each student learns.
+          </p>
+          <div class="tag-row"><span>Tutoring</span><span>Technical Communication</span><span>Problem Solving</span><span>Mentoring</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SELECTED ORGANIZATIONS -->
+    <section id="organizations" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">04 / Clubs &amp; Organizations</p>
+        <h2>Building beyond class.</h2>
+        <p>A glimpse of my engineering communities. See more of my involvement and leadership experiences.</p>
+      </div>
+      <div class="organization-grid">
+        <article class="organization-card reveal">
+          <span class="organization-index">01</span>
+          <p class="organization-label">Iowa State University</p>
+          <h3>Audio &amp; Arduino Club</h3>
+          <strong>Mentor &amp; Member</strong>
+          <p>Mentor other builders and contribute to hands-on electronics projects, including amplifiers, Arduino systems, custom boards, and desktop audio builds.</p>
+        </article>
+        <article class="organization-card reveal">
+          <span class="organization-index">02</span>
+          <p class="organization-label">Engineering Honor Society</p>
+          <h3>IEEE–Eta Kappa Nu</h3>
+          <strong>Member</strong>
+          <p>Participate in a community centered on academic excellence, professional development, and service in electrical and computer engineering.</p>
+        </article>
+      </div>
+      <div class="section-actions"><a class="button primary" href="organizations.html">View all organizations &rarr;</a></div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section id="hobbies" class="section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">06 / Hobbies</p>
+        <h2>The non-silicon parts.</h2>
+      </div>
+
+      <div class="hobby-grid">
+        <a class="hobby-card reveal" href="hobbies/photography.html"><span>📷</span><h3>Photography</h3><p>Landscapes, travel, architecture, and interesting light.</p></a>
+        <a class="hobby-card reveal" href="hobbies/art.html"><span>🎨</span><h3>Art</h3><p>Painting and visual design when I want a different kind of problem.</p></a>
+        <a class="hobby-card reveal" href="hobbies/books.html"><span>📚</span><h3>Books</h3><p>Fantasy, mystery, expansive fictional worlds, and detective stories.</p></a>
+        <a class="hobby-card reveal" href="hobbies/cars.html"><span>🏎️</span><h3>Cars</h3><p>Engineering, performance, design, and machines with character.</p></a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+      <div class="contact-card reveal">
+        <div class="contact-pulse"></div>
+        <p class="eyebrow">07 / Contact</p>
+        <h2>Let's build something worth debugging.</h2>
+        <p>Replace the placeholder below with your university or professional email.</p>
+        <a class="button primary" href="mailto:your.email@example.com">your.email@example.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed & built by Sayon Saha.</p>
+    <p>© <span id="year"></span></p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <span>↑</span>
+    <small>TOP</small>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Current, completed, and planned coursework in computer and electrical engineering at Iowa State University." />
+  <title>Coursework | Sayon Saha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="grid-overlay"></div>
+
+  <header class="site-header">
+    <a class="logo" href="index.html#home" aria-label="Home">SS<span>.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="index.html#bio" class="nav-link">Bio</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="index.html#experience" class="nav-link">Experience</a>
+      <a href="organizations.html" class="nav-link">Organizations</a>
+      <a href="courses.html" class="nav-link active" aria-current="page">Courses</a>
+      <a href="index.html#hobbies" class="nav-link">Hobbies</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Courses Section -->
+
+    <section id="courses" class="section courses-page">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Coursework</p>
+        <h1>What was, what is and what will be</h1>
+        <p>
+          Keeping a living record of current classes, what I've completed before,
+          and what I'm planning to take on.
+        </p>
+      </div>
+
+      <div class="course-tabs reveal" role="tablist" aria-label="Course groups">
+        <button class="course-tab active" data-course-tab="current" role="tab" aria-selected="true">Current Courses</button>
+        <button class="course-tab" data-course-tab="completed" role="tab" aria-selected="false">Completed Courses</button>
+        <button class="course-tab" data-course-tab="up next" role="tab" aria-selected="false">Up Next</button>
+      </div>
+
+      <div class="course-panel active" data-course-panel="current">
+        <div class="course-list">
+          <article class="course-card reveal">
+            <div class="course-topline">
+              <div>
+                <span class="course-status">IN PROGRESS</span>
+                <span class="course-code">COMS 3090</span>
+                <h3>Software Development Practices</h3>
+              </div>
+              <button class="course-toggle" aria-expanded="false" aria-label="Expand course">+</button>
+            </div>
+            <div class="course-details">
+              <div>
+                <h4>Course overview</h4>
+                <p>We will explore modern software development practices and methodologies in a team based semester-long project setting.</p>
+              </div>
+              <div>
+                <h4>What I'm doing</h4>
+                <p>
+                  Building an Android application with a team of 4 people, using version
+                  control, APIs, backend integration, frontend optimization, testing, and collaborative software workflows.
+                </p>
+              </div>
+              <div>
+                <h4>Tools / Skills</h4>
+                <div class="tag-row"><span>Java</span><span>Android</span><span>Git</span><span>APIs</span><span>SpringBoot</span><span>MySQL</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-topline">
+              <div>
+                <span class="course-status">IN PROGRESS</span>
+                <span class="course-code">CPRE 3810</span>
+                <h3>Computer Organization and Assembly Level Programming</h3>
+              </div>
+              <button class="course-toggle" aria-expanded="false" aria-label="Expand course">+</button>
+            </div>
+            <div class="course-details">
+              <div>
+                <h4>Course overview</h4>
+                <p>Introduction to Computer Architecture and Organization, instruction set design and assembly language programming,
+                  control flow instruction, procedure calls, stack management, datapath and control, processor design, memory and I/O systems
+                </p>
+              </div>
+              <div>
+                <h4>What I'm doing</h4>
+                <p>
+                  Learning assembly language programming, understanding computer architecture, and exploring the design of processors and memory systems along with data 
+                  pipelining and instruction-level parallelism orders. Designing, validating and evaluating three RISC-V processors(single-cycle, software-scheduled pipeline,
+                  and hardware-scheduled pipeline) in a team of 2 by the end of the semester.
+                </p>
+              </div>
+              <div>
+                <h4>Tools / Skills</h4>
+                <div class="tag-row"><span>Assembly</span><span>RISC-V</span><span>Computer Architecture</span><span>Pipelining</span>
+                <span>Datapaths</span><span>CPU Design Basics</span><span>VHDL</span><span></span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-topline">
+              <div>
+                <span class="course-status">IN PROGRESS</span>
+                <span class="course-code">CPRE 3300</span>
+                <h3>Integrated Systems</h3>
+              </div>
+              <button class="course-toggle" aria-expanded="false" aria-label="Expand course">+</button>
+            </div>
+            <div class="course-details">
+              <div>
+                <h4>Course overview</h4>
+                <p>
+                  • Introduction to semiconductor technology, integrated circuit design, and digital systems.<br> • Modeling of IC devices including BJTs, MOSFETs,
+                  Diodes, Thyristors etc. <br> • Analysis of both digital and analog building blocks
+                </p>
+              </div>
+              <div>
+                <h4>What I'm doing</h4>
+                <p>
+                  • Learn semiconductor physics, device modeling, and IC fabrication.<br>• Explore digital and analog circuit design, including logic gates, flip-flops, amplifiers, and filters.
+                  <br>• Learn physical layout, circuit simulation, digital building blocks, and digital synthesis.<br>• Analysis and design 
+                  of analog building blocks. <br>• Design and implement a complete integrated system using both digital and analog components by end of semester.
+                </p>
+              </div>
+              <div>
+                <h4>Tools / Skills</h4>
+                <div class="tag-row"><span>Semiconductor Physics</span><span>Device Modeling</span><span>IC Fabrication</span><span>Digital Component Design</span><span>Analog Component Design</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-topline">
+              <div>
+                <span class="course-status">IN PROGRESS</span>
+                <span class="course-code">EE 3030</span>
+                <h3>Energy Systems and Power Electronics</h3>
+              </div>
+              <button class="course-toggle" aria-expanded="false" aria-label="Expand course">+</button>
+            </div>
+            <div class="course-details">
+              <div>
+                <h4>Course overview</h4>
+                <p>
+                  • Structure, operation and economic optimization of energy systems <br> • Inductors, transformers, and power converters <br> • Power electronics applications in energy systems
+                </p>
+              </div>
+              <div>
+                <h4>What I'm doing</h4>
+                <p>
+                  • Learn system operations and their variations <br> • Mutual inductance, synchronous generators, and three phase circuit analysis and power calculations <br>
+                  • Network calculations, power flow and associated numerical methods <br> • Two-port circuits, voltage regulation, resonance and power factor correction <br>
+                  • Power electronics applications in power supplies and motor drives
+                </p>
+              </div>
+              <div>
+                <h4>Tools / Skills</h4>
+                <div class="tag-row"><span>Energy Systems</span><span>Power Electronics</span><span>Power Calculations</span><span>Network Analysis</span><span>Power Factor Correction</span><span>Power Supplies</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-topline">
+              <div>
+                <span class="course-status">IN PROGRESS</span>
+                <span class="course-code">MATH 2650</span>
+                <h3>Calculus III</h3>
+              </div>
+              <button class="course-toggle" aria-expanded="false" aria-label="Expand course">+</button>
+            </div>
+            <div class="course-details">
+              <div>
+                <h4>Course overview</h4>
+                <p>
+                  • Multivariable calculus, including partial derivatives, multiple integrals, and vector calculus. <br> • Applications in physics, engineering, and optimization problems.
+                </p>
+              </div>
+              <div>
+                <h4>What I'm doing</h4>
+                <p>
+                  • Study the theory and application of multivariable calculus in various fields. <br> • Geometry of space vectors, coordinate systems
+                </p>
+              </div>
+              <div>
+                <h4>Tools / Skills</h4>
+                <div class="tag-row"><span>Calculus</span><span>Vector Analysis</span><span>Optimization</span><span>Physics Applications</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="course-card reveal">
+            <div class="course-topline">
+              <div>
+                <span class="course-status">IN PROGRESS</span>
+                <span class="course-code">ECON 1010</span>
+                <h3>Principles of Microeconomics</h3>
+              </div>
+              <button class="course-toggle" aria-expanded="false" aria-label="Expand course">+</button>
+            </div>
+            <div class="course-details">
+              <div>
+                <h4>Course overview</h4>
+                <p>
+                  • Supply and demand, market equilibrium, and elasticity. <br> • Consumer and producer surplus, and market efficiency. <br> • Resource allocation, competition and economic strategic behavior
+                </p>
+              </div>
+              <div>
+                <h4>What I'm doing</h4>
+                <p>
+                  • Learning about the principles of microeconomics, including supply and demand, market equilibrium, elasticity, consumer and producer surplus, and market efficiency. <br> 
+                  • Exploring resource allocation, opportunity costs, comparative and absolute advantage. <br> • Marginal analysis, theories of production and consumption, and market structures. <br> 
+                  • Understanding the role of government in microeconomics, including taxation, regulation, and public goods.
+                </p>
+              </div>
+              <div>
+                <h4>Tools / Skills</h4>
+                <div class="tag-row"><span>Supply and Demand</span><span>Market Equilibrium</span><span>Elasticity</span><span>Consumer Surplus</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- Completed Courses -->
+      <div class="course-panel" data-course-panel="completed" hidden>
+        <div class="semester-stack">
+          <section class="semester-block reveal" aria-labelledby="fall-2024-heading">
+            <div class="semester-heading">
+              <span class="course-status">Completed</span>
+              <h3 id="fall-2024-heading">Fall 2024</h3>
+            </div>
+            <div class="completed-grid">
+             <article class="completed-course">
+                <div><span class="course-code">CPRE 2880</span><h3>Add Completed CPRE Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Use this section as a compact record of your technical progression.</p>
+                <div class="tag-row"><span>Systems</span><span>Design</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">MATH 2070</span><h3>Add Completed MATH Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Include any relevant math courses that support your engineering skills.</p>
+                <div class="tag-row"><span>Calculus</span><span>Linear Algebra</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">EE 2300</span><h3>Add Completed EE Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Highlight any additional electrical engineering courses that demonstrate your expertise.</p>
+                <div class="tag-row"><span>Electronics</span><span>Signal Processing</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">CPRE 2320</span><h3>Add Completed CPRE Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Showcase any other computer engineering courses that are relevant to your portfolio.</p>
+                <div class="tag-row"><span>Embedded Systems</span><span>Microcontrollers</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">CPRE 3100</span><h3>Add Completed MATH Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Include any additional math courses that have contributed to your engineering knowledge.</p>
+                <div class="tag-row"><span>Differential Equations</span><span>Probability</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">PHYS 2320</span><h3>Add Completed EE Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>List any further electrical engineering courses that are significant to your skill set.</p>
+                <div class="tag-row"><span>Control Systems</span><span>Power Electronics</span></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="semester-block reveal" aria-labelledby="spring-2025-heading">
+            <div class="semester-heading">
+              <span class="course-status">Completed</span>
+              <h3 id="spring-2025-heading">Spring 2025</h3>
+            </div>
+            <div class="completed-grid">
+             <article class="completed-course">
+                <div><span class="course-code">CPRE `1860</span><h3></h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Systems</span><span>Design</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">MATH 1660</span><h3></h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Calculus</span><span></span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">COMS 2270</span><h3></h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Electronics</span><span>Signal Processing</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">ENGL 2500</span><h3></h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Writing</span><span>Communication</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">CPRE 3100</span><h3>Add Completed MATH Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Include any additional math courses that have contributed to your engineering knowledge.</p>
+                <div class="tag-row"><span>Differential Equations</span><span>Probability</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">PHYS 2320</span><h3>Add Completed EE Course</h3></div>
+                <span class="check">&#10003;</span>
+                <p>List any further electrical engineering courses that are significant to your skill set.</p>
+                <div class="tag-row"><span>Control Systems</span><span>Power Electronics</span></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="semester-block reveal" aria-labelledby="fall-2025-heading">
+            <div class="semester-heading">
+              <span class="course-status">Completed</span>
+              <h3 id="fall-2025-heading">Fall 2025</h3>
+            </div>
+            <div class="completed-grid">
+              <article class="completed-course">
+                <div><span class="course-code">COMS 2280</span><h3>Introduction to Data Structures</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Systems</span><span>Design</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">CPRE 2810</span><h3>Digital Logic</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Calculus</span><span>Linear Algebra</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">EE 2010</span><h3>Electric Circuits</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Electronics</span><span>Signal Processing</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">MATH 2670</span><h3>Elementary Differential Equations and Laplace Transforms</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Embedded Systems</span><span>Microcontrollers</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">PHIL 3430</span><h3>Ethics of Computing and Artificial Intelligence</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait.</p>
+                <div class="tag-row"><span>Differential Equations</span><span>Probability</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">HIST 2010</span><h3>Introduction to Western Civilization I</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Under Construction. Please Wait  .</p>
+                <div class="tag-row"><span>Control Systems</span><span>Power Electronics</span></div>
+              </article>
+            </div>
+          </section>
+
+          <section class="semester-block reveal" aria-labelledby="spring-2026-heading">
+            <div class="semester-heading">
+              <span class="course-status">Completed</span>
+              <h3 id="spring-2026-heading">Spring 2026</h3>
+            </div>
+            <div class="completed-grid">
+              <article class="completed-course">
+                <div><span class="course-code">CPRE 2880</span><h3>Embedded Systems I</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Introduction to embedded systems design and programming. Built a implementation of a underwater mine clearing bot using TM4C123GH6PM MCU, sensors including IR, Sonar, Bump
+                  etc. and a working live monitoring system. The chassis was a iRobot Roomba, with the whole system including both an Automatic and a Manual mode.
+                </p>
+                <div class="tag-row"><span>Embedded Systems</span><span>Design</span><span>MCU Configuration</span><span>Sensor Setup and Calibration</span>
+                <span>Pathfinding</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">MATH 2070</span><h3>Matrices and Linear Algebra</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Systems of Linear Equations, Vector Spaces, Linear Transformations, Eigenvalues and Eigenvectors, Orthogonality, and Applications in Engineering and Computer Science.</p>
+                <div class="tag-row"><span>Calculus</span><span>Linear Algebra</span><span>Optimization</span><span>Systems of Equations</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">EE 2300</span><h3>Electronic Circuits and Systems</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Frequency domain characterization, transfer functions, sinusoidal steady-state analysis, and circuit design. Time domain models of linear and
+                  nonlinear circuits. OpAmps, A/D and D/A converters, filters, diodes characteristics and model analysis. Built a three phase audio crossover as a
+                  final project.
+                </p>
+                <div class="tag-row"><span>Circuit Analysis</span><span>Filter Design</span><span>Signal Processing</span><span>Oscillators and Transistors</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">CPRE 2320</span><h3>Professional and Ethical Issues in Electrical and Computer Engineering</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Soft skills, including communication, teamwork, and ethical decision-making in engineering practice. Case studies and real-world applications
+                  illustrating ethical decision making in an engineering context.
+                </p>
+                <div class="tag-row"><span>Communication</span><span>Ethics</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">CPRE 3100</span><h3>Theoretical Foundations of Computer Engineering</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Propositional logic and methods of proof, basic discrete mathematics, and algorithmic thinking. Mathematical induction and recurrence
+                  relations, functions and relations. Trees and graphs, and their applications in computer engineering.
+                </p>
+                <div class="tag-row"><span>Discrete Mathematics</span><span>Logic</span><span>Proof Techniques</span></div>
+              </article>
+
+              <article class="completed-course">
+                <div><span class="course-code">PHYS 2320</span><h3>Classical Physics II</h3></div>
+                <span class="check">&#10003;</span>
+                <p>Electric forces and fields, magnetic fields and forces, electromagnetic induction. Circuits and resonance.</p>
+                <div class="tag-row"><span>Classical Physics</span><span>Electromagnetism</span><span>Circuit Analysis</span></div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="course-panel" data-course-panel="up next" hidden>
+        <article class="glass-card">
+          <h3>Up Next</h3>
+          <p>Planned courses will be added here.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Designed & built by Sayon Saha.</p>
+    <p>© <span id="year"></span></p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <span>↑</span>
+    <small>TOP</small>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

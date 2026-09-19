@@ -1,0 +1,36 @@
+/* Standalone coursework page. */
+.section.courses-page {
+  padding-top: 145px;
+}
+
+.courses-page .section-heading h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2.45rem, 5vw, 4.9rem);
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+
+@media (max-width: 640px) {
+  .section.courses-page { padding-top: 120px; }
+}
+
+/* Full collections and their homepage previews. */
+.section.detail-page { padding-top: 145px; }
+.detail-page .section-heading h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2.45rem, 5vw, 4.9rem);
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+.section-actions { margin-top: 30px; }
+.project-card[id] { scroll-margin-top: 110px; }
+.project-card:target { border-color: var(--emerald); }
+.section-actions a:focus-visible,
+.project-links a:focus-visible {
+  outline: 3px solid var(--emerald);
+  outline-offset: 5px;
+}
+@media (max-width: 640px) {
+  .section.detail-page { padding-top: 120px; }
+  .section-actions .button { width: 100%; }
+}

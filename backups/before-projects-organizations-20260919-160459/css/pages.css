@@ -1,0 +1,15 @@
+/* Standalone coursework page. */
+.section.courses-page {
+  padding-top: 145px;
+}
+
+.courses-page .section-heading h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2.45rem, 5vw, 4.9rem);
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+
+@media (max-width: 640px) {
+  .section.courses-page { padding-top: 120px; }
+}
