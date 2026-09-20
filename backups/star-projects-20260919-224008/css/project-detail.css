@@ -78,11 +78,3 @@
   .case-commands > div { grid-template-columns: 1fr; gap: 6px; }
   .case-equation,.case-outcome { padding: 22px; }
 }
-
-/* Concise STAR project summaries. */
-.case-study-star .case-section { padding-block: 42px; }
-.case-study-star .case-section-body h2 { font-size: clamp(1.4rem,2.4vw,2rem); margin-bottom: 16px; }
-.case-study-star .case-prose { margin-bottom: 0; }
-.case-study-star .case-end { padding-block: 40px; }
-.project-github[aria-disabled="true"] { color: var(--muted); cursor: default; }
-.project-github[aria-disabled="true"]:hover { transform: none; box-shadow: none; }
