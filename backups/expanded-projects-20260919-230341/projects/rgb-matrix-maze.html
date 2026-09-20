@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="../css/hobbies.css" />
   <link rel="stylesheet" href="../css/pages.css" />
   <link rel="stylesheet" href="../css/project-detail.css" />
-  <link rel="stylesheet" href="../css/project-expanded.css" />
 </head>
 <body>
   <a class="skip-case" href="#main-content">Skip to project content</a>
@@ -41,7 +40,7 @@
     </nav>
   </header>
 
-  <main id="main-content" class="case-study case-study-star case-study-expanded">
+  <main id="main-content" class="case-study case-study-star">
     <section class="section case-hero" aria-labelledby="project-title">
       <a class="case-back" href="../projects.html">&larr; All projects</a>
       <div class="case-hero-grid">
@@ -69,18 +68,7 @@
     </section>
     <section class="section case-section" aria-labelledby="action">
       <div class="case-section-label"><span>A</span><p>Action</p></div>
-      <div class="case-section-body"><h2 id="action">Turn input into movement commands</h2><p class="case-prose">My parser read controller data on the laptop, applied a joystick dead zone, and sent left or right commands over a 9600-baud serial connection. I also contributed to the game code, which used red obstacles, a green player, collision checks, and timed downward movement. The display code used Adafruit graphics and RGB matrix libraries.</p>
-<h3 class="design-subheading">Separate input processing from the display</h3>
-<ol class="case-pipeline" aria-label="Controller to display pipeline"><li><span>01 / Laptop</span><strong>Controller data → C parser</strong><p>The parser reads a line of structured input and accepts it only when all eleven fields are present.</p></li><li><span>02 / Serial</span><strong>One-byte commands</strong><p>The laptop and Arduino-side sketch communicate at 9600 baud using L and R for movement.</p></li><li><span>03 / Display</span><strong>Update the game state</strong><p>The sketch checks the next cell, updates the avatar position, and draws the changed pixels.</p></li></ol>
-<h3 class="design-subheading">My parser: turn an axis value into a direction</h3>
-<p class="case-prose">I used <code>termios</code> to configure the serial connection and <code>sscanf</code> to read the incoming record. The field named <code>rx</code> controls horizontal movement. A dead zone around zero prevents small joystick variations from generating a movement request.</p>
-<table class="case-table design-table"><caption>Input thresholds in the C parser</caption><thead><tr><th scope="col">Component / setting</th><th scope="col">Value and purpose</th></tr></thead><tbody><tr><th scope="row">rx &gt; 0.6</th><td>Send R to request one cell to the right.</td></tr><tr><th scope="row">rx &lt; −0.6</th><td>Send L to request one cell to the left.</td></tr><tr><th scope="row">−0.6 ≤ rx ≤ 0.6</th><td>Send no movement command for that input record.</td></tr></tbody></table>
-<p class="case-prose">Each qualifying record produces one command, so the incoming record rate affects horizontal movement speed. Keeping the protocol small lets the display code work with directions instead of the full controller data format.</p>
-<h3 class="design-subheading">Game logic: one grid, two movement rules</h3>
-<div class="case-grid"><article class="case-card"><h3>Horizontal movement</h3><p>The game stores obstacles in a <code>char MAZE[32][32]</code> array and tracks the avatar separately, starting at column 16, row 0. Before moving left or right, it checks both the display boundary and whether the neighboring cell contains a wall.</p></article><article class="case-card"><h3>Timed gravity</h3><p>A <code>millis()</code> comparison permits a downward step after more than 500 ms, provided the cell below is open. This avoids pausing the whole loop for a half-second delay and keeps serial input available between gravity steps.</p></article></div>
-<p class="case-prose">The initial board is drawn once, with red obstacles and a green avatar. Valid movement clears the old avatar pixel and draws the new one. Adafruit GFX and RGB matrix Panel provide the graphics and panel-control routines; my contribution was the parser and portions of the application’s game code.</p>
-<p class="case-prose">The supplied generator uses a difficulty setting of 50, giving each cell a nominal 50% chance of becoming an obstacle. It creates a random field rather than guaranteeing a solvable route. The custom 3D-printed housing packages the panel as a physical game display.</p>
-</div>
+      <div class="case-section-body"><h2 id="action">Turn input into movement commands</h2><p class="case-prose">My parser read controller data on the laptop, applied a joystick dead zone, and sent left or right commands over a 9600-baud serial connection. I also contributed to the game code, which used red obstacles, a green player, collision checks, and timed downward movement. The display code used Adafruit graphics and RGB matrix libraries.</p></div>
     </section>
     <section class="section case-section" aria-labelledby="result">
       <div class="case-section-label"><span>R</span><p>Result</p></div>

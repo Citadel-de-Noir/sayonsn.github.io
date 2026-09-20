@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="../css/pages.css" />
   <link rel="stylesheet" href="../css/project-detail.css" />
   <link rel="stylesheet" href="../css/audio-projects.css" />
-  <link rel="stylesheet" href="../css/project-expanded.css" />
 </head>
 <body>
   <a class="skip-case" href="#main-content">Skip to project content</a>
@@ -42,7 +41,7 @@
     </nav>
   </header>
 
-  <main id="main-content" class="case-study case-study-star case-study-expanded audio-project">
+  <main id="main-content" class="case-study case-study-star audio-project">
     <section class="section case-hero" aria-labelledby="project-title">
       <a class="case-back" href="../projects.html#personal-projects">&larr; Personal projects</a>
       <div class="case-hero-grid">
@@ -57,13 +56,7 @@
     </section>
     <section class="section case-section" aria-labelledby="situation"><div class="case-section-label"><span>S</span><p>Situation</p></div><div class="case-section-body"><h2 id="situation">Drive a larger audio load</h2><p class="case-prose">The GTDT design extends the basic headphone-amplifier approach to desktop speakers. It combines voltage gain with an output stage that can supply more current.</p></div></section>
     <section class="section case-section" aria-labelledby="task"><div class="case-section-label"><span>T</span><p>Task</p></div><div class="case-section-body"><h2 id="task">Assemble the stereo amplifier</h2><p class="case-prose">I built the club’s GTDT circuit under Dr. Gary Tuttle’s guidance. The project connected op-amp feedback, transistor output stages, and power-supply design in one board-level build.</p></div></section>
-    <section class="section case-section" aria-labelledby="action"><div class="case-section-label"><span>A</span><p>Action</p></div><div class="case-section-body"><h2 id="action">Build the signal and power stages</h2><p class="case-prose">The design pairs TL082 non-inverting stages with complementary MJE172 and MJE182 transistors. Assembly moves from resistors and small capacitors to the transistors, rectifier, 15 V regulator, connectors, and bulk capacitors. A single supply requires the audio stages to be biased above ground.</p>
-<h3 class="design-subheading">Voltage gain followed by current drive</h3>
-<p class="case-prose">Each TL082 channel uses a 150 kΩ / 10 kΩ feedback network for a nominal midband gain of <strong>16</strong>. Complementary MJE172 PNP and MJE182 NPN transistors form the Class-B output stages, adding the current capability needed for desktop speakers. Four 150 kΩ bias resistors establish the half-supply reference for single-supply operation.</p>
-<table class="case-table design-table"><caption>Key values in the club design</caption><thead><tr><th scope="col">Component / setting</th><th scope="col">Value and purpose</th></tr></thead><tbody><tr><th scope="row">Input & regulator capacitors</th><td>Three 0.33 µF capacitors: C1/C2 at the audio inputs and C8 in the regulator section.</td></tr><tr><th scope="row">Bias & feedback</th><td>R1–R4: 150 kΩ each. R5/R8: 150 kΩ; R6/R7: 10 kΩ. C3/C4: 3.3 µF each.</td></tr><tr><th scope="row">Amplifier devices</th><td>One TL082 dual op-amp, two MJE172 PNPs, and two MJE182 NPNs.</td></tr><tr><th scope="row">Power section</th><td>DF01 bridge rectifier, 7815 regulator, and three 3300 µF electrolytic capacitors (C5–C7).</td></tr><tr><th scope="row">Connections & indicator</th><td>Stereo input/output terminal blocks, power terminal block, and an LED with a 10 kΩ resistor.</td></tr></tbody></table>
-<p class="case-prose">The club design accepts a 12 V RMS transformer source or an 18 V DC supply. Its rectifier and regulator section makes the power circuitry more involved than the Altoids amp’s split battery supply. The PCB has no built-in volume control or on/off switch; those can be incorporated into an enclosure.</p>
-<h3 class="design-subheading">Build process</h3><ol class="design-steps"><li><strong>Build the low-profile signal network</strong><p>Install the 0.33 µF capacitors, bias resistors, feedback resistors, and 3.3 µF capacitors before adding the op-amp socket. Distinguishing the 150 kΩ and 10 kΩ feedback positions is essential to the intended gain.</p></li><li><strong>Add the output and power devices</strong><p>Fit the complementary transistors with their base, collector, and emitter leads matched to the PCB labels. Then install the 7815 regulator, rectifier, and power-indicator components with the specified orientation.</p></li><li><strong>Finish the board</strong><p>Add the terminal blocks and three large 3300 µF capacitors, checking polarity before inserting the TL082. This completes the guide’s assembly sequence and prepares the board for power and audio checks.</p></li></ol>
-</div></section>
+    <section class="section case-section" aria-labelledby="action"><div class="case-section-label"><span>A</span><p>Action</p></div><div class="case-section-body"><h2 id="action">Build the signal and power stages</h2><p class="case-prose">The design pairs TL082 non-inverting stages with complementary MJE172 and MJE182 transistors. Assembly moves from resistors and small capacitors to the transistors, rectifier, 15 V regulator, connectors, and bulk capacitors. A single supply requires the audio stages to be biased above ground.</p></div></section>
     <section class="section case-section" aria-labelledby="result"><div class="case-section-label"><span>R</span><p>Result</p></div><div class="case-section-body"><h2 id="result">Broaden my amplifier-building experience</h2><p class="case-prose">I completed the GTDT desktop amplifier project through the club. Compared with the Altoids build, it added transistor pinout considerations, a more involved power section, and speaker-output circuitry.</p></div></section>
     <section id="build-gallery" class="section audio-gallery-section" aria-labelledby="gallery-title">
       <p class="eyebrow">Design &amp; build process</p><h2 id="gallery-title">From components to a complete board.</h2>

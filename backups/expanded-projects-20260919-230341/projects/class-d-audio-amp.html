@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="../css/pages.css" />
   <link rel="stylesheet" href="../css/project-detail.css" />
   <link rel="stylesheet" href="../css/audio-projects.css" />
-  <link rel="stylesheet" href="../css/project-expanded.css" />
 </head>
 <body>
   <a class="skip-case" href="#main-content">Skip to project content</a>
@@ -42,7 +41,7 @@
     </nav>
   </header>
 
-  <main id="main-content" class="case-study case-study-star case-study-expanded audio-project">
+  <main id="main-content" class="case-study case-study-star audio-project">
     <section class="section case-hero" aria-labelledby="project-title">
       <a class="case-back" href="../projects.html#personal-projects">&larr; Personal projects</a>
       <div class="case-hero-grid">
@@ -57,12 +56,7 @@
     </section>
     <section class="section case-section" aria-labelledby="situation"><div class="case-section-label"><span>S</span><p>Situation</p></div><div class="case-section-body"><h2 id="situation">Explore another amplifier architecture</h2><p class="case-prose">This club project introduced the TPA3122 Class-D design alongside the analog amplifier builds. Its switching output stage brings filtering and power-supply components into sharper focus.</p></div></section>
     <section class="section case-section" aria-labelledby="task"><div class="case-section-label"><span>T</span><p>Task</p></div><div class="case-section-body"><h2 id="task">Build the TPA3122 amplifier board</h2><p class="case-prose">I assembled the club’s amplifier design under Dr. Gary Tuttle’s guidance. The task involved identifying a larger set of capacitors and understanding how the power, control, and output sections fit together.</p></div></section>
-    <section class="section case-section" aria-labelledby="action"><div class="case-section-label"><span>A</span><p>Action</p></div><div class="case-section-body"><h2 id="action">Assemble the filters and controls</h2><p class="case-prose">The build starts with resistors and small capacitors, followed by connectors, the IC socket, output inductors, and control headers. Bootstrap and bypass capacitors support the chip, while the output filter and coupling components connect it to the speakers. Jumpers select gain and control mute and shutdown.</p>
-<h3 class="design-subheading">A switching amplifier with external filtering</h3>
-<p class="case-prose">The TPA3122 handles the Class-D amplification, while the surrounding circuit provides power conditioning, bootstrap support, and speaker-output filtering. Unlike the GTDT’s discrete output transistors, much of the active output circuitry is inside the amplifier IC. External inductors and capacitors remain important parts of the output path.</p>
-<table class="case-table design-table"><caption>Key values in the club design</caption><thead><tr><th scope="col">Component / setting</th><th scope="col">Value and purpose</th></tr></thead><tbody><tr><th scope="row">Control resistors</th><td>Four 10 kΩ pull-ups for gain, mute, and shutdown; a 1 kΩ LED resistor and two 4.7 kΩ output-filter resistors.</td></tr><tr><th scope="row">Bootstrap & local bypass</th><td>C7/C12: 0.22 µF bootstrap capacitors. C10: 10 µF; C5/C8/C14: 0.1 µF local bypass capacitors.</td></tr><tr><th scope="row">Signal & chip support</th><td>Four 1 µF capacitors: C3/C4 couple the inputs, while the other two serve VCLAMP and BYPASS.</td></tr><tr><th scope="row">Output filtering</th><td>L1/L2 inductors paired with 0.68 µF capacitors C15/C16; C17/C18 are 470 µF output-coupling capacitors.</td></tr><tr><th scope="row">Power conditioning</th><td>Bridge rectifier, 15 V regulator with 0.22 µF C2, 3300 µF input smoothing capacitor C1, and 470 µF supply bypass capacitors C6/C13.</td></tr></tbody></table>
-<h3 class="design-subheading">Build process</h3><ol class="design-steps"><li><strong>Sort and install the smaller parts</strong><p>Identify the resistor values and capacitor markings before soldering. The guide uses 224 for 0.22 µF, 104 for 0.1 µF, 105 for 1 µF, and 684 for 0.68 µF, making part identification a central assembly task.</p></li><li><strong>Build the output and control sections</strong><p>Install the connectors, 20-pin socket, output inductors, and four jumper headers. Add the regulator, LED, and larger electrolytic capacitors, checking polarity and component alignment.</p></li><li><strong>Check power before inserting the IC</strong><p>The guide recommends verifying 15 V at socket pins 1, 10, 16, and 17 and ground at pins 7, 8, 11, and 20. With the chip installed, all four jumpers select a gain of 10 and leave mute and shutdown inactive. These are the guide’s setup checks, not reported measurements from my build.</p></li></ol>
-</div></section>
+    <section class="section case-section" aria-labelledby="action"><div class="case-section-label"><span>A</span><p>Action</p></div><div class="case-section-body"><h2 id="action">Assemble the filters and controls</h2><p class="case-prose">The build starts with resistors and small capacitors, followed by connectors, the IC socket, output inductors, and control headers. Bootstrap and bypass capacitors support the chip, while the output filter and coupling components connect it to the speakers. Jumpers select gain and control mute and shutdown.</p></div></section>
     <section class="section case-section" aria-labelledby="result"><div class="case-section-label"><span>R</span><p>Result</p></div><div class="case-section-body"><h2 id="result">Add switching-amplifier experience</h2><p class="case-prose">I completed the Class-D amplifier project as part of my club work. The build expanded my experience with component placement, output filtering, and hardware configuration across different audio amplifier designs.</p></div></section>
     <section id="build-gallery" class="section audio-gallery-section" aria-labelledby="gallery-title">
       <p class="eyebrow">Design &amp; build process</p><h2 id="gallery-title">From components to a complete board.</h2>

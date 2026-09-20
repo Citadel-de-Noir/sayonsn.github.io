@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="../css/pages.css" />
   <link rel="stylesheet" href="../css/project-detail.css" />
   <link rel="stylesheet" href="../css/audio-projects.css" />
-  <link rel="stylesheet" href="../css/project-expanded.css" />
 </head>
 <body>
   <a class="skip-case" href="#main-content">Skip to project content</a>
@@ -42,7 +41,7 @@
     </nav>
   </header>
 
-  <main id="main-content" class="case-study case-study-star case-study-expanded audio-project">
+  <main id="main-content" class="case-study case-study-star audio-project">
     <section class="section case-hero" aria-labelledby="project-title">
       <a class="case-back" href="../projects.html#personal-projects">&larr; Personal projects</a>
       <div class="case-hero-grid">
@@ -57,13 +56,7 @@
     </section>
     <section class="section case-section" aria-labelledby="situation"><div class="case-section-label"><span>S</span><p>Situation</p></div><div class="case-section-body"><h2 id="situation">Start with a compact audio circuit</h2><p class="case-prose">Audio Arduino Club offered a practical way to connect circuit theory with a physical build. The Altoids design uses two non-inverting amplifier channels to boost a wired headphone signal.</p></div></section>
     <section class="section case-section" aria-labelledby="task"><div class="case-section-label"><span>T</span><p>Task</p></div><div class="case-section-body"><h2 id="task">Build the club’s headphone amplifier</h2><p class="case-prose">My task was to assemble the provided circuit and work through its compact packaging under Dr. Gary Tuttle’s guidance. The focus was component identification, soldering, and understanding the signal and power paths.</p></div></section>
-    <section class="section case-section" aria-labelledby="action"><div class="case-section-label"><span>A</span><p>Action</p></div><div class="case-section-body"><h2 id="action">Work from the small parts outward</h2><p class="case-prose">The build progresses from the input and feedback components to the socket, power switch, capacitors, and audio jacks. Two 9 V batteries supply the TL082 circuit. The enclosure design places the connectors through the tin and insulates the board from its metal base.</p>
-<h3 class="design-subheading">Circuit design and component choices</h3>
-<p class="case-prose">A TL082 dual op-amp provides one non-inverting stage for each stereo channel. The 15 kΩ and 1 kΩ feedback resistors set a nominal voltage gain of <strong>1 + 15/1 = 16</strong>. The two batteries create positive and negative supply rails around a common ground, allowing the audio signal to swing on either side of zero.</p>
-<table class="case-table design-table"><caption>Key values in the club design</caption><thead><tr><th scope="col">Component / setting</th><th scope="col">Value and purpose</th></tr></thead><tbody><tr><th scope="row">TL082 + feedback network</th><td>Dual op-amp; two 15 kΩ and two 1 kΩ resistors set the channel gains.</td></tr><tr><th scope="row">Input components</th><td>Two 100 kΩ resistors and two 100 nF capacitors form the input networks.</td></tr><tr><th scope="row">Supply bypassing</th><td>Two 100 µF electrolytic capacitors help stabilize the battery supply rails.</td></tr><tr><th scope="row">Power & indication</th><td>Two 9 V batteries, a double-pole switch, and red/green LEDs with 1 kΩ current-limiting resistors.</td></tr><tr><th scope="row">Audio connections</th><td>Separate stereo input and output jacks; volume is adjusted at the source.</td></tr></tbody></table>
-<h3 class="design-subheading">Build process</h3><ol class="design-steps"><li><strong>Populate the small components</strong><p>Start with the input and feedback resistors, then the small capacitors. The board’s ground plane draws heat away from solder joints, making consistent heating especially important at ground connections.</p></li><li><strong>Assemble and check the power path</strong><p>Add the socket, switch, battery terminal, bypass capacitors, and jacks. The guide calls for checking the supply rails and switch operation before installing the semiconductors; capacitor polarity and op-amp orientation are key checks.</p></li><li><strong>Fit the enclosure</strong><p>The guide places two ¼-inch connector holes 24 mm apart in the tin. An insulating layer keeps the PCB underside away from the metal enclosure, while the connector nuts secure the board. The batteries share the remaining space.</p></li></ol>
-<p class="case-note">The gain above is calculated from the design values. It is not a measured result from my individual build.</p>
-</div></section>
+    <section class="section case-section" aria-labelledby="action"><div class="case-section-label"><span>A</span><p>Action</p></div><div class="case-section-body"><h2 id="action">Work from the small parts outward</h2><p class="case-prose">The build progresses from the input and feedback components to the socket, power switch, capacitors, and audio jacks. Two 9 V batteries supply the TL082 circuit. The enclosure design places the connectors through the tin and insulates the board from its metal base.</p></div></section>
     <section class="section case-section" aria-labelledby="result"><div class="case-section-label"><span>R</span><p>Result</p></div><div class="case-section-body"><h2 id="result">Connect electronics with packaging</h2><p class="case-prose">I completed the Altoids amplifier project as a hands-on club build. It brought together stereo op-amp circuitry, through-hole assembly, and the mechanical constraints of a small enclosure.</p></div></section>
     <section id="build-gallery" class="section audio-gallery-section" aria-labelledby="gallery-title">
       <p class="eyebrow">Design &amp; build process</p><h2 id="gallery-title">From components to a complete board.</h2>

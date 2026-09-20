@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A team robotics project using a ground-based CyBot and the TI TM4C123GH6PM microcontroller to simulate a naval mine-search mission." />
+  <meta name="description" content="A CPRE 288 CyBot project: manual and autonomous control, movement logic, ultrasonic sensing, servo scanning, and embedded C on the TI TM4C123GH6PM." />
   <title>Underwater Mine Seeker | Sayon Saha</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,41 +40,131 @@
     </nav>
   </header>
 
-  <main id="main-content" class="case-study case-study-star">
+  <main id="main-content" class="case-study">
     <section class="section case-hero" aria-labelledby="project-title">
       <a class="case-back" href="../projects.html">&larr; All projects</a>
       <div class="case-hero-grid">
         <div>
-          <p class="eyebrow">CPRE 288 · Spring 2026</p>
+          <p class="eyebrow">CPRE 288 · Embedded Systems · Spring 2026</p>
           <h1 id="project-title">Underwater<br>Mine Seeker<span class="case-title-dot">.</span></h1>
-          <p class="case-lead">Manual control, autonomous decisions, and a scanning sensor head.</p>
-          <p class="case-intro">A team robotics project using a ground-based CyBot and the TI TM4C123GH6PM microcontroller to simulate a naval mine-search mission.</p>
-          <div class="tag-row"><span>Embedded C</span><span>TM4C123GH6PM</span><span>Robot control</span></div>
+          <p class="case-lead">Making a robot decide when to move, when to investigate, and when to hand control back.</p>
+          <p class="case-intro">A naval mine-search simulation built on a ground-based CyBot with a TI TM4C123GH6PM microcontroller. The robot combines a scanning sensor head, differential-drive movement, and manual and autonomous control to explore a course containing obstacles and simulated mine targets.</p>
+          <div class="tag-row"><span>Embedded C</span><span>TM4C123GH6PM</span><span>Robot control</span><span>UART</span></div>
           <div class="section-actions"><a class="button secondary project-github" data-project-github="underwater-mine-seeker" role="link" aria-disabled="true">GitHub · Coming soon</a></div>
         </div>
         <figure class="case-scan">
-          <img src="../assets/images/mine-seeker-scan.svg" width="560" height="400" alt="Polar diagram of a recorded target at 121 degrees and 25.75 centimeters." />
-          <figcaption>A recorded scan, illustrated from the robot’s telemetry.</figcaption>
+          <img src="../assets/images/mine-seeker-scan.svg" width="560" height="400" alt="Polar illustration of a logged target at 121 degrees and 25.75 centimeters, with an estimated width of 4.51 centimeters." />
+          <figcaption>A target from the recorded manual-scan telemetry, redrawn as a polar diagram.</figcaption>
         </figure>
       </div>
+      <dl class="case-facts">
+        <div><dt>My focus</dt><dd>Control &amp; sensor integration</dd></div>
+        <div><dt>Operating modes</dt><dd>Manual + autonomous</dd></div>
+        <div><dt>Platform</dt><dd>CyBot / iRobot Create</dd></div>
+        <div><dt>Project setting</dt><dd>Team course project</dd></div>
+      </dl>
     </section>
-    <section class="section case-section" aria-labelledby="situation">
-      <div class="case-section-label"><span>S</span><p>Situation</p></div>
-      <div class="case-section-body"><h2 id="situation">Searching a simulated minefield</h2><p class="case-prose">Our CPRE 288 team built a robot to explore a course containing obstacles and simulated mine targets. It needed to support both operator control and autonomous navigation.</p></div>
+
+    <nav class="case-jump" aria-label="Project sections">
+      <a href="#contribution">My contribution</a><a href="#architecture">System</a><a href="#behavior">Behavior</a><a href="#sensing">Sensing</a><a href="#evidence">Recorded data</a>
+    </nav>
+
+    <section id="contribution" class="section case-section">
+      <div class="case-section-label"><span>01</span><p>My contribution</p></div>
+      <div class="case-section-body">
+        <h2>Turning sensor information into behavior.</h2>
+        <p class="case-prose">I developed the main program, movement routines, and behavior logic for both autonomous operation and manual driving. My work also covered the timer, scan, ultrasonic ping, and servo modules, connecting low-level sensing and timing to decisions about where and when the robot should move.</p>
+        <div class="case-grid">
+          <article class="case-card"><span class="eyebrow">Movement</span><h3>Distance and heading control</h3><p>Drive and turn routines use the platform's incremental distance and angle feedback. Movement can exit when a stop request, manual takeover, bump, or cliff condition is detected.</p></article>
+          <article class="case-card"><span class="eyebrow">Decision logic</span><h3>Actions with conditions</h3><p>The autonomous loop chooses between investigating targets, rescanning uncertain detections, facing a gap, and searching in another direction. Recovery behavior handles obstacles and course boundaries.</p></article>
+          <article class="case-card"><span class="eyebrow">Sensing</span><h3>Scan and ultrasonic ranging</h3><p>I worked on the scan functions that coordinate sensor-head positioning and range acquisition, along with the ping driver that triggers the ultrasonic sensor and captures its echo pulse with timer interrupts.</p></article>
+          <article class="case-card"><span class="eyebrow">Timing &amp; actuation</span><h3>Timer and servo control</h3><p>My work included timer integration for waits and elapsed-time checks, and servo positioning through timer-generated PWM. Calibrated endpoint counts map a requested angle to the sensor head's control signal.</p></article>
+        </div>
+        <p class="case-credit">The complete system is a team effort, combining my main-control, timer, scan, ping, and servo work with the ADC and communication modules, a Python operator interface, and course-provided platform utilities.</p>
+      </div>
     </section>
-    <section class="section case-section" aria-labelledby="task">
-      <div class="case-section-label"><span>T</span><p>Task</p></div>
-      <div class="case-section-body"><h2 id="task">Connect sensing to behavior</h2><p class="case-prose">I was responsible for the main program, movement routines, and behavior logic in both operating modes. My work also covered the timer, scan, ultrasonic ping, and servo modules.</p></div>
+
+    <section id="architecture" class="section case-section">
+      <div class="case-section-label"><span>02</span><p>System architecture</p></div>
+      <div class="case-section-body">
+        <h2>One controller. Two ways to explore.</h2>
+        <p class="case-prose">A PC interface sends operator commands over a socket connection, while the embedded firmware receives control bytes through UART. The main loop combines those commands with scan results and feedback from the mobile base.</p>
+        <ol class="case-pipeline" aria-label="Control architecture">
+          <li><span>01 / Operator</span><strong>PC interface</strong><p>Mode selection, drive commands, scan requests, and telemetry display.</p></li>
+          <li><span>02 / Controller</span><strong>TM4C123GH6PM</strong><p>UART command flags, movement routines, and behavior decisions in C.</p></li>
+          <li><span>03 / Physical system</span><strong>Drive + sensing</strong><p>Wheel control, servo-mounted IR and ultrasonic ranging, bump and cliff feedback.</p></li>
+        </ol>
+        <p class="case-prose">Feedback closes the loop: distance and angle increments update a relative position estimate, and the firmware reports object angles, ranges, widths, and operating status. This is a local navigation strategy using odometry and repeated scans, rather than a global route planner.</p>
+      </div>
     </section>
-    <section class="section case-section" aria-labelledby="action">
-      <div class="case-section-label"><span>A</span><p>Action</p></div>
-      <div class="case-section-body"><h2 id="action">Coordinate movement and scanning</h2><p class="case-prose">I implemented manual driving and autonomous decisions for scanning, investigating targets, choosing gaps, and recovering from bump or cliff detections. I integrated servo positioning, ultrasonic ranging, and timing with the main control loop, including stop requests and manual takeover. These pieces worked alongside teammates’ modules and course-provided utilities.</p></div>
+
+    <section id="behavior" class="section case-section">
+      <div class="case-section-label"><span>03</span><p>Control &amp; behavior</p></div>
+      <div class="case-section-body">
+        <h2>Autonomy with an operator in the loop.</h2>
+        <div class="case-grid">
+          <article class="case-card"><p class="eyebrow">Manual mode</p><h3>Direct control, with checks.</h3><p>The operator drives with W/A/S/D and requests a scan while stationary. The drive routine stops issuing movement when a command has not been refreshed for 250 ms. This is a command-age threshold in the firmware, not a measured end-to-end stopping time.</p><p>When a bump or boundary is detected, forward motion is blocked while reverse and turning commands remain available for recovery. A scan clears the active movement command before collecting data.</p></article>
+          <article class="case-card"><p class="eyebrow">Autonomous mode</p><h3>Scan, decide, move, repeat.</h3><p>Autonomous mode is selected separately from its start command. Once started, the loop checks for hazards, scans for targets and gaps, and chooses its next action.</p><p>Confirmed targets trigger a stop, an angle report, sensor-head pointing, an audible indication, and a pause for simulated removal. A rescan checks whether targets remain before the counter advances.</p></article>
+        </div>
+        <div class="case-table-wrap">
+          <table class="case-table"><caption>Behavior implemented in the control loop</caption><thead><tr><th scope="col">Condition</th><th scope="col">Robot response</th></tr></thead><tbody>
+            <tr><th scope="row">Bump during autonomous operation</th><td>Stop, reverse, and attempt a turn and detour based on the bumper side.</td></tr>
+            <tr><th scope="row">Boundary or hole indication</th><td>Stop, back away, and choose a turn using the left/right cliff sensor readings.</td></tr>
+            <tr><th scope="row">Confirmed simulated mine</th><td>Report and point at the target, pause for removal, then rescan.</td></tr>
+            <tr><th scope="row">Detection in only one sweep</th><td>Report uncertainty, back up slightly, and scan again.</td></tr>
+            <tr><th scope="row">Traversable gap</th><td>Turn toward its midpoint and attempt a checked forward step.</td></tr>
+            <tr><th scope="row">No target or usable gap</th><td>Turn left to search from a different heading.</td></tr>
+            <tr><th scope="row">Stop or manual takeover request</th><td>Exit checked movement, scan, or waiting routines when their interruption checks run.</td></tr>
+          </tbody></table>
+        </div>
+        <details class="case-details"><summary>Explore the operator commands</summary><dl class="case-commands"><div><dt><kbd>M</kbd></dt><dd>Select manual mode</dd></div><div><dt><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></dt><dd>Forward, left, reverse, right</dd></div><div><dt><kbd>I</kbd></dt><dd>Request a manual scan</dd></div><div><dt><kbd>N</kbd> then <kbd>Z</kbd></dt><dd>Select and start autonomous mode</dd></div><div><dt><kbd>X</kbd></dt><dd>Request stop</dd></div><div><dt><kbd>Q</kbd></dt><dd>Release manual movement</dd></div></dl></details>
+      </div>
     </section>
-    <section class="section case-section" aria-labelledby="result">
-      <div class="case-section-label"><span>R</span><p>Result</p></div>
-      <div class="case-section-body"><h2 id="result">A combined control and sensing implementation</h2><p class="case-prose">The final firmware brought manual and autonomous behavior together with the scanning system. A saved scan reported a target at 121°, about 25.75 cm away, with an estimated width of 4.51 cm—concrete evidence of the sensing pipeline producing target data.</p></div>
+
+    <section id="sensing" class="section case-section">
+      <div class="case-section-label"><span>04</span><p>Sensing &amp; decisions</p></div>
+      <div class="case-section-body">
+        <h2>A detection has to earn a response.</h2>
+        <p class="case-prose">The scanning pipeline uses infrared range estimates to locate object edges across the forward field of view. After a segment is found, the servo points at its midpoint and an ultrasonic measurement provides range for the width estimate.</p>
+        <div class="case-equation"><span>Estimated object width</span><code>w = 2d × tan(Δθ / 2)</code><p>Here, d is the midpoint range and Δθ is the object's angular span.</p></div>
+        <p class="case-prose">The final working firmware sweeps from 0° to 180° in 1° steps. It treats widths from 2–7 cm as potential mine targets, subject to visibility and filtering checks. Partially visible edge objects remain obstacles, and nearby narrow segments are checked for the possibility that they belong to one wider object.</p>
+        <details class="case-details"><summary>Inside the timer, ping, and servo modules</summary><p class="case-prose">The ping driver uses PB3 and Timer 3B edge-capture interrupts to record the echo pulse. Pulse duration is converted to a distance estimate, with a 20 ms wait limit that returns an invalid reading if the echo does not complete.</p><p class="case-prose">The servo module uses Timer 1B PWM on PB5. It clamps requested angles to 180° and maps them between calibrated endpoint counts. Timer 5 provides the elapsed-time utility used by the program, while the scanning functions coordinate servo movement, IR readings, and midpoint ultrasonic measurements.</p></details>
+        <div class="case-grid">
+          <article class="case-card"><h3>Confirm before classifying</h3><p>Two sweeps are compared using angle and range tolerances. Matching candidates are averaged into a confirmed detection. A candidate appearing in only one sweep prompts another look instead of immediately advancing the task.</p></article>
+          <article class="case-card"><h3>Look for space, not just objects</h3><p>The scan also tracks clear angular intervals and estimates gap width. When both sweeps indicate a usable gap, the controller can align to its midpoint. Forward motion remains subject to bump and cliff checks.</p></article>
+        </div>
+        <p class="case-note">These thresholds are implementation settings. They do not establish measured detection accuracy, range accuracy, or a guaranteed collision-free path.</p>
+      </div>
     </section>
-    <div class="section case-end"><a class="button primary" href="../projects.html">Explore more projects &rarr;</a></div>
+
+    <section id="engineering" class="section case-section">
+      <div class="case-section-label"><span>05</span><p>Engineering choices</p></div>
+      <div class="case-section-body">
+        <h2>Handling the cases between “go” and “stop.”</h2>
+        <div class="case-choices">
+          <article><h3>Interruptible work</h3><p>Longer operations contain explicit checks for operator requests. Autonomous scans permit manual takeover, and the simulated-removal wait checks for stop and mode changes. UART status messages are deferred to the main loop through a pending-status byte.</p></article>
+          <article><h3>Recovery has different rules</h3><p>A hazard response cannot always reuse the same checks as forward travel: a bumper may remain pressed while reversing away. The movement helper accepts separate bump and cliff checks, allowing recovery routines to choose which conditions to monitor. Those exceptions make recovery possible, but they also need careful physical testing.</p></article>
+          <article><h3>Measured motion, with calibration</h3><p>Drive distance accumulates the base's feedback instead of relying only on a timed motor command. Turns accumulate reported angle and apply separate left/right offsets. Relative position is estimated from distance and heading, so drift remains a limitation without an external position reference.</p></article>
+          <article><h3>Conservative sensing costs time</h3><p>Repeating a scan and checking ambiguous detections adds delay, but gives the controller more evidence before acting. The implementation exposes this decision process through serial messages so the operator can see why the robot rescans or changes direction.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="evidence" class="section case-section">
+      <div class="case-section-label"><span>06</span><p>Recorded evidence</p></div>
+      <div class="case-section-body">
+        <h2>What the robot reported.</h2>
+        <p class="case-prose">The saved sensor log contains manual scan requests, object measurements, target reports, and scan-completion messages. This excerpt captures one reported target:</p>
+        <figure class="case-log"><figcaption>Recorded serial output · sensor-scan.txt</figcaption><pre><code>Object angle 116-126 mid 121 dist 25.75 width 4.51
+…
+Mine 1 angle: 121 dist: 25.75 width: 4.51
+SCAN END</code></pre></figure>
+        <p class="case-prose">The target report places the object at 121° and approximately 25.75 cm, with an estimated width of 4.51 cm. A later scan in the same log reports approximately 25.76 cm and 4.51 cm for a target at the same angle. These are the robot's estimates from a recorded session; the log does not provide ground-truth measurements for an accuracy calculation.</p>
+        <p class="case-prose">The firmware includes both operating modes and a completion condition based on a six-target counter. The available log documents manual scanning; it does not establish a full autonomous mission result or a measured success rate.</p>
+        <div class="case-outcome"><p class="eyebrow">Project focus</p><h3>Connecting perception, motion, and operator intent.</h3><p>The central engineering work was coordinating these pieces into understandable behavior: know why movement started, check what should interrupt it, and choose a recovery action when the environment changes.</p></div>
+        <div class="section-actions"><a class="button primary" href="../projects.html">Explore more projects &rarr;</a><a class="button secondary" href="../index.html#projects">Back to portfolio</a></div>
+      </div>
+    </section>
   </main>
 
   <footer>
