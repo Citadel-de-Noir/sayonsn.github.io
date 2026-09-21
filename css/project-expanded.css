@@ -1,0 +1,13 @@
+/* Medium-detail case studies retain the existing STAR structure. */
+.case-study-expanded .design-subheading { margin: 34px 0 16px; font-size: 1.25rem; }
+.case-study-expanded .case-prose + .case-prose { margin-top: 18px; }
+.case-study-expanded .design-table { margin-block: 22px 28px; table-layout: fixed; }
+.case-study-expanded .design-table th:first-child { width: 36%; }
+.case-study-expanded .design-table th, .case-study-expanded .design-table td { overflow-wrap: anywhere; }
+.case-study-expanded .design-steps { margin: 0; padding-left: 23px; }
+.case-study-expanded .design-steps li { padding-left: 8px; margin-bottom: 22px; }
+.case-study-expanded .design-steps li::marker { color: var(--emerald); font-weight: 700; }
+.case-study-expanded .design-steps strong { font-size: 1rem; }
+.case-study-expanded .design-steps p { color: var(--muted); margin: 8px 0 0; }
+.case-study-expanded code { overflow-wrap: anywhere; }
+@media(max-width:640px) { .case-study-expanded .case-table th, .case-study-expanded .case-table td { padding: 12px 8px; } }

@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/hobbies.css" />
   <link rel="stylesheet" href="css/pages.css" />
-  <link rel="stylesheet" href="css/audio-projects.css" />
 </head>
 <body>
   <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
@@ -59,9 +58,9 @@
         </div>
 
         <div class="social-row">
-          <a href="https://github.com/Citadel-de-Noir" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          <a href="https://www.linkedin.com/in/sayonsaha05/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-          <a href="assets/Sayon-Saha-Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a>
+          <a href="#">GitHub ↗</a>
+          <a href="#">LinkedIn ↗</a>
+          <a href="#">Résumé ↗</a>
         </div>
 
         <div class="scroll-cue" aria-hidden="true">
@@ -147,11 +146,20 @@
         <p>From custom electronics to embedded systems. Explore the full collection for more personal and coursework projects.</p>
       </div>
       <div class="project-grid">
-        <article id="altoids-headphone-amp" class="project-card reveal tilt-card audio-project-card">
-            <div class="project-image"><div class="audio-photo"><img src="assets/images/audio-club/altoids-finished.png" alt="Reference Altoids amplifier in a mint tin connected to headphones" loading="lazy" /></div><span class="project-type">PERSONAL · AUDIO CLUB</span></div>
-            <div class="project-content"><div class="project-number">01</div><h3>Altoids Headphone Amp</h3><p>A club-guided stereo headphone amplifier build, combining a TL082 op-amp, dual 9 V batteries, and a compact Altoids-tin enclosure.</p>
-              <div class="tag-row"><span>Analog audio</span><span>TL082</span><span>Soldering</span></div>
-              <div class="project-links"><a href="projects/altoids-headphone-amp.html">Explore the build &rarr;</a></div>
+        <article class="project-card reveal tilt-card">
+            <div class="project-image">
+              <img src="https://placehold.co/1200x760/07110c/4ade80?text=Personal+Project+01" alt="Custom ESP32 board placeholder" />
+              <span class="project-type">PERSONAL</span>
+            </div>
+            <div class="project-content">
+              <div class="project-number">01</div>
+              <h3>Custom ESP32 Board</h3>
+              <p>
+                Custom microcontroller board covering schematic capture, PCB layout,
+                power regulation, USB, component selection, assembly, and board bring-up.
+              </p>
+              <div class="tag-row"><span>ESP32</span><span>KiCad</span><span>PCB Design</span></div>
+              <div class="project-links"><a href="projects.html#custom-esp32-board">View project &rarr;</a></div>
             </div>
           </article>
         <article class="project-card reveal tilt-card">
@@ -160,7 +168,7 @@
               <span class="project-type">COURSEWORK</span>
             </div>
             <div class="project-content">
-              <div class="project-number">02</div>
+              <div class="project-number">01</div>
               <h3>Underwater Mine Seeker</h3>
               <p>A CyBot naval mine-search simulation combining manual and autonomous control, sensor scanning, and obstacle-response behavior on a TI TM4C123GH6PM.</p>
               <div class="tag-row"><span>C</span><span>Sensors</span><span>Embedded</span><span>Servo Control</span></div>

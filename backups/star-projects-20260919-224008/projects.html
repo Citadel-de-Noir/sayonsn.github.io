@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/hobbies.css" />
   <link rel="stylesheet" href="css/pages.css" />
-  <link rel="stylesheet" href="css/audio-projects.css" />
 </head>
 <body>
   <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
@@ -45,10 +44,10 @@
       <div class="section-heading reveal">
         <p class="eyebrow">Projects</p>
         <h1>Built for class. Built because I wanted to.</h1>
-        <p>Personal builds, club projects, and coursework — each with a different engineering challenge.</p>
+        <p>Projects are separated so recruiters can quickly see independent work versus coursework.</p>
       </div>
 
-      <div id="personal-projects" class="project-category">
+      <div class="project-category">
         <div class="category-heading reveal">
           <span class="category-index">A</span>
           <div>
@@ -58,30 +57,37 @@
         </div>
 
         <div class="project-grid">
-          
-
-          
-          <article id="altoids-headphone-amp" class="project-card reveal tilt-card audio-project-card">
-            <div class="project-image"><div class="audio-photo"><img src="assets/images/audio-club/altoids-finished.png" alt="Reference Altoids amplifier in a mint tin connected to headphones" loading="lazy" /></div><span class="project-type">PERSONAL · AUDIO CLUB</span></div>
-            <div class="project-content"><div class="project-number">01</div><h3>Altoids Headphone Amp</h3><p>A club-guided stereo headphone amplifier build, combining a TL082 op-amp, dual 9 V batteries, and a compact Altoids-tin enclosure.</p>
-              <div class="tag-row"><span>Analog audio</span><span>TL082</span><span>Soldering</span></div>
-              <div class="project-links"><a href="projects/altoids-headphone-amp.html">Explore the build &rarr;</a></div>
+          <article id="custom-esp32-board" class="project-card reveal tilt-card">
+            <div class="project-image">
+              <img src="https://placehold.co/1200x760/07110c/4ade80?text=Personal+Project+01" alt="Custom ESP32 board placeholder" />
+              <span class="project-type">PERSONAL</span>
+            </div>
+            <div class="project-content">
+              <div class="project-number">01</div>
+              <h3>Custom ESP32 Board</h3>
+              <p>
+                Custom microcontroller board covering schematic capture, PCB layout,
+                power regulation, USB, component selection, assembly, and board bring-up.
+              </p>
+              <div class="tag-row"><span>ESP32</span><span>KiCad</span><span>PCB Design</span></div>
+              <div class="project-links"><a href="#">Details →</a><a href="#">GitHub ↗</a></div>
             </div>
           </article>
 
-          <article id="gtdt-desktop-amp" class="project-card reveal tilt-card audio-project-card">
-            <div class="project-image"><div class="audio-photo audio-photo-framed" style="aspect-ratio:375/225;--image-width:284%;--image-left:-135.46666666666667%;--image-top:-253.33333333333331%"><img src="assets/images/audio-club/gtdt-finished.png" alt="Completed GTDT desktop amplifier board shown in Gary Tuttle’s guide" loading="lazy" /></div><span class="project-type">PERSONAL · AUDIO CLUB</span></div>
-            <div class="project-content"><div class="project-number">02</div><h3>GTDT Desktop Amp</h3><p>A club-guided stereo speaker amplifier build with TL082 gain stages, complementary transistor outputs, and a regulated power section.</p>
-              <div class="tag-row"><span>Analog audio</span><span>Class B</span><span>PCB assembly</span></div>
-              <div class="project-links"><a href="projects/gtdt-desktop-amp.html">Explore the build &rarr;</a></div>
+          <article id="audio-amplifier" class="project-card reveal tilt-card">
+            <div class="project-image">
+              <img src="https://placehold.co/1200x760/07110c/22c55e?text=Personal+Project+02" alt="Audio system placeholder" />
+              <span class="project-type">PERSONAL</span>
             </div>
-          </article>
-
-          <article id="class-d-audio-amp" class="project-card reveal tilt-card audio-project-card">
-            <div class="project-image"><div class="audio-photo audio-photo-framed" style="aspect-ratio:500/300;--image-width:188.6%;--image-left:-15%;--image-top:-122.33333333333334%"><img src="assets/images/audio-club/class-d-finished.png" alt="Completed TPA3122 Class-D amplifier board from the club guide" loading="lazy" /></div><span class="project-type">PERSONAL · AUDIO CLUB</span></div>
-            <div class="project-content"><div class="project-number">03</div><h3>Class-D Audio Amp</h3><p>A club-guided TPA3122 amplifier build covering switching amplification, output filters, power conditioning, and jumper-based controls.</p>
-              <div class="tag-row"><span>Class D</span><span>TPA3122</span><span>Output filters</span></div>
-              <div class="project-links"><a href="projects/class-d-audio-amp.html">Explore the build &rarr;</a></div>
+            <div class="project-content">
+              <div class="project-number">02</div>
+              <h3>2.1 Audio Amplifier System</h3>
+              <p>
+                Custom audio electronics project involving amplifier design, speaker
+                integration, subwoofer integration, enclosure work, and system testing.
+              </p>
+              <div class="tag-row"><span>Analog</span><span>Audio</span><span>PCB</span><span>Electronics</span></div>
+              <div class="project-links"><a href="#">Details →</a><a href="#">GitHub ↗</a></div>
             </div>
           </article>
         </div>
@@ -111,9 +117,21 @@
             </div>
           </article>
 
-          <article id="rgb-matrix-maze" class="project-card reveal tilt-card">
-            <div class="project-image"><img src="assets/images/rgb-matrix-maze.svg" alt="Illustration of a 32 by 32 RGB maze with red walls and a green avatar" loading="lazy" /><span class="project-type">CPRE 1860 · SPRING 2025</span></div>
-            <div class="project-content"><div class="project-number">02</div><h3>RGB Matrix Maze</h3><p>A DualShock 4-controlled maze on a 32×32 RGB panel in a custom 3D-printed housing. My work included the laptop-side C parser and contributions to the game code.</p><div class="tag-row"><span>DualShock 4</span><span>C / C++</span><span>Serial</span><span>RGB Matrix</span></div><div class="project-links"><a href="projects/rgb-matrix-maze.html">Explore project &rarr;</a></div></div>
+          <article id="course-project" class="project-card reveal tilt-card">
+            <div class="project-image">
+              <img src="https://placehold.co/1200x760/07110c/15803d?text=Coursework+Project+02" alt="Course project placeholder" />
+              <span class="project-type">COURSEWORK</span>
+            </div>
+            <div class="project-content">
+              <div class="project-number">02</div>
+              <h3>Add Course Project</h3>
+              <p>
+                Duplicate this card for software, embedded, digital logic, circuits,
+                robotics, or other substantial class projects.
+              </p>
+              <div class="tag-row"><span>Tool</span><span>Skill</span><span>Technology</span></div>
+              <div class="project-links"><a href="#">Details →</a><a href="#">GitHub ↗</a></div>
+            </div>
           </article>
         </div>
       </div>

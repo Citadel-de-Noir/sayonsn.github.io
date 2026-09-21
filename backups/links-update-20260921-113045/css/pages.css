@@ -34,6 +34,3 @@
   .section.detail-page { padding-top: 120px; }
   .section-actions .button { width: 100%; }
 }
-
-/* Keep the animated profile rings inside the mobile viewport. */
-@media (max-width: 640px) { .hero { overflow-x: clip; } }

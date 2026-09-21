@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A stereo desktop amplifier I built in Audio Arduino Club under Dr. Gary Tuttle, using op-amp gain stages and bipolar transistor outputs." />
+  <title>GTDT Desktop Amp | Sayon Saha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/hobbies.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="stylesheet" href="../css/project-detail.css" />
+  <link rel="stylesheet" href="../css/audio-projects.css" />
+</head>
+<body>
+  <a class="skip-case" href="#main-content">Skip to project content</a>
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="grid-overlay"></div>
+
+  <header class="site-header">
+    <a class="logo" href="../index.html#home" aria-label="Home">SS<span>.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html#home" class="nav-link">Home</a>
+      <a href="../index.html#bio" class="nav-link">Bio</a>
+      <a href="../projects.html" class="nav-link active" aria-current="page">Projects</a>
+      <a href="../courses.html" class="nav-link">Courses</a>
+      <a href="../index.html#experience" class="nav-link">Experience</a>
+      <a href="../organizations.html" class="nav-link">Organizations</a>
+      <a href="../index.html#hobbies" class="nav-link">Hobbies</a>
+      <a href="../index.html#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="case-study case-study-star audio-project">
+    <section class="section case-hero" aria-labelledby="project-title">
+      <a class="case-back" href="../projects.html#personal-projects">&larr; Personal projects</a>
+      <div class="case-hero-grid">
+        <div><p class="eyebrow">Personal · Audio Arduino Club</p>
+          <h1 id="project-title">GTDT<br>Desktop Amp<span class="case-title-dot">.</span></h1>
+          <p class="case-lead">From headphone-level amplification to desktop speakers.</p><p class="case-intro">A stereo desktop amplifier I built in Audio Arduino Club under Dr. Gary Tuttle, using op-amp gain stages and bipolar transistor outputs.</p>
+          <div class="tag-row"><span>Analog audio</span><span>Class B</span><span>PCB assembly</span></div>
+          <div class="section-actions"><a class="button secondary" href="#build-gallery">View the build &darr;</a></div>
+        </div>
+        <figure class="case-scan audio-hero-photo"><div class="audio-photo audio-photo-framed" style="aspect-ratio:375/225;--image-width:284%;--image-left:-135.46666666666667%;--image-top:-253.33333333333331%"><img src="../assets/images/audio-club/gtdt-finished.png" alt="Completed GTDT desktop amplifier board shown in Gary Tuttle’s guide"  /></div><figcaption>Club guide reference photo · Dr. Gary Tuttle</figcaption></figure>
+      </div>
+    </section>
+    <section class="section case-section" aria-labelledby="situation"><div class="case-section-label"><span>S</span><p>Situation</p></div><div class="case-section-body"><h2 id="situation">Drive a larger audio load</h2><p class="case-prose">The GTDT design extends the basic headphone-amplifier approach to desktop speakers. It combines voltage gain with an output stage that can supply more current.</p></div></section>
+    <section class="section case-section" aria-labelledby="task"><div class="case-section-label"><span>T</span><p>Task</p></div><div class="case-section-body"><h2 id="task">Assemble the stereo amplifier</h2><p class="case-prose">I built the club’s GTDT circuit under Dr. Gary Tuttle’s guidance. The project connected op-amp feedback, transistor output stages, and power-supply design in one board-level build.</p></div></section>
+    <section class="section case-section" aria-labelledby="action"><div class="case-section-label"><span>A</span><p>Action</p></div><div class="case-section-body"><h2 id="action">Build the signal and power stages</h2><p class="case-prose">The design pairs TL082 non-inverting stages with complementary MJE172 and MJE182 transistors. Assembly moves from resistors and small capacitors to the transistors, rectifier, 15 V regulator, connectors, and bulk capacitors. A single supply requires the audio stages to be biased above ground.</p></div></section>
+    <section class="section case-section" aria-labelledby="result"><div class="case-section-label"><span>R</span><p>Result</p></div><div class="case-section-body"><h2 id="result">Broaden my amplifier-building experience</h2><p class="case-prose">I completed the GTDT desktop amplifier project through the club. Compared with the Altoids build, it added transistor pinout considerations, a more involved power section, and speaker-output circuitry.</p></div></section>
+    <section id="build-gallery" class="section audio-gallery-section" aria-labelledby="gallery-title">
+      <p class="eyebrow">Design &amp; build process</p><h2 id="gallery-title">From components to a complete board.</h2>
+      <p class="case-prose audio-credit">Reference photographs from Dr. Gary Tuttle’s GTDT desktop amplifier build guide, supplied as screenshots. These show the club’s reference builds.</p>
+      <div class="audio-gallery"><figure><a href="../assets/images/audio-club/gtdt-parts.png" target="_blank" rel="noopener noreferrer" aria-label="Open full reference image: 01 / Parts & layout"><div class="audio-photo audio-photo-framed" style="aspect-ratio:500/366;--image-width:180.4%;--image-left:-9.4%;--image-top:-12.021857923497267%"><img src="../assets/images/audio-club/gtdt-parts.png" alt="GTDT amplifier PCB and components from the club build guide" loading="lazy" /></div></a><figcaption><h3>01 / Parts & layout</h3><p>The kit adds output transistors, a regulator, and large capacitors to the stereo amplifier PCB.</p></figcaption></figure>
+<figure><a href="../assets/images/audio-club/gtdt-output-stage.png" target="_blank" rel="noopener noreferrer" aria-label="Open full reference image: 02 / Output stage"><div class="audio-photo audio-photo-framed" style="aspect-ratio:372/225;--image-width:231.7204301075269%;--image-left:-115.3225806451613%;--image-top:-208.8888888888889%"><img src="../assets/images/audio-club/gtdt-output-stage.png" alt="GTDT PCB with complementary output transistors installed" loading="lazy" /></div></a><figcaption><h3>02 / Output stage</h3><p>Complementary transistor pairs provide the output-current stage for the two channels.</p></figcaption></figure>
+<figure><a href="../assets/images/audio-club/gtdt-finished.png" target="_blank" rel="noopener noreferrer" aria-label="Open full reference image: 03 / Completed board"><div class="audio-photo audio-photo-framed" style="aspect-ratio:375/225;--image-width:284%;--image-left:-135.46666666666667%;--image-top:-253.33333333333331%"><img src="../assets/images/audio-club/gtdt-finished.png" alt="Completed GTDT desktop amplifier board shown in Gary Tuttle’s guide" loading="lazy" /></div></a><figcaption><h3>03 / Completed board</h3><p>The guide’s finished board includes the TL082, regulator, terminal blocks, and bulk capacitors.</p></figcaption></figure></div>
+      <p class="case-credit">Circuit design and build guidance: Dr. Gary Tuttle / Audio Arduino Club. My role: building and learning from the club design.</p>
+    </section>
+    <div class="section case-end"><a class="button primary" href="../projects.html#personal-projects">Explore personal projects &rarr;</a></div>
+  </main>
+
+  <footer>
+    <p>Designed & built by Sayon Saha.</p>
+    <p>© <span id="year"></span></p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <span>↑</span>
+    <small>TOP</small>
+  </button>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

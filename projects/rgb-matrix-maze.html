@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A laptop-connected maze project using a DualShock 4 controller and an RGB panel housed in a custom 3D-printed enclosure." />
+  <title>RGB Matrix Maze | Sayon Saha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/hobbies.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="stylesheet" href="../css/project-detail.css" />
+  <link rel="stylesheet" href="../css/project-expanded.css" />
+</head>
+<body>
+  <a class="skip-case" href="#main-content">Skip to project content</a>
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="grid-overlay"></div>
+
+  <header class="site-header">
+    <a class="logo" href="../index.html#home" aria-label="Home">SS<span>.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html#home" class="nav-link">Home</a>
+      <a href="../index.html#bio" class="nav-link">Bio</a>
+      <a href="../projects.html" class="nav-link active" aria-current="page">Projects</a>
+      <a href="../courses.html" class="nav-link">Courses</a>
+      <a href="../index.html#experience" class="nav-link">Experience</a>
+      <a href="../organizations.html" class="nav-link">Organizations</a>
+      <a href="../index.html#hobbies" class="nav-link">Hobbies</a>
+      <a href="../index.html#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="case-study case-study-star case-study-expanded">
+    <section class="section case-hero" aria-labelledby="project-title">
+      <a class="case-back" href="../projects.html">&larr; All projects</a>
+      <div class="case-hero-grid">
+        <div>
+          <p class="eyebrow">CPRE 1860 · Spring 2025</p>
+          <h1 id="project-title">RGB Matrix<br>Maze<span class="case-title-dot">.</span></h1>
+          <p class="case-lead">From controller input to a game on a 32×32 RGB panel.</p>
+          <p class="case-intro">A laptop-connected maze project using a DualShock 4 controller and an RGB panel housed in a custom 3D-printed enclosure.</p>
+          <div class="tag-row"><span>C / C++</span><span>DualShock 4</span><span>Serial</span><span>RGB Matrix</span></div>
+          <div class="section-actions"><a class="button secondary project-github" data-project-github="rgb-matrix-maze" role="link" aria-disabled="true">GitHub · Coming soon</a></div>
+        </div>
+        <figure class="case-scan">
+          <img src="../assets/images/rgb-matrix-maze.svg" width="560" height="400" alt="Illustration of a 32 by 32 RGB maze with red walls and a green avatar." />
+          <figcaption>Illustrative grid based on the game code; not a hardware photo.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section case-section" aria-labelledby="situation">
+      <div class="case-section-label"><span>S</span><p>Situation</p></div>
+      <div class="case-section-body"><h2 id="situation">Bring a game onto a physical display</h2><p class="case-prose">For our CPRE 1860 team project, we used a laptop-centered setup to connect a DualShock 4 controller with a 32×32 RGB panel. The panel sat inside a custom 3D-printed housing.</p></div>
+    </section>
+    <section class="section case-section" aria-labelledby="task">
+      <div class="case-section-label"><span>T</span><p>Task</p></div>
+      <div class="case-section-body"><h2 id="task">Build the input bridge</h2><p class="case-prose">I wrote the C parser and contributed to portions of the game source code. My role focused on translating controller input into commands the game could use.</p></div>
+    </section>
+    <section class="section case-section" aria-labelledby="action">
+      <div class="case-section-label"><span>A</span><p>Action</p></div>
+      <div class="case-section-body"><h2 id="action">Turn input into movement commands</h2><p class="case-prose">My parser read controller data on the laptop, applied a joystick dead zone, and sent left or right commands over a 9600-baud serial connection. I also contributed to the game code, which used red obstacles, a green player, collision checks, and timed downward movement. The display code used Adafruit graphics and RGB matrix libraries.</p>
+<h3 class="design-subheading">Separate input processing from the display</h3>
+<ol class="case-pipeline" aria-label="Controller to display pipeline"><li><span>01 / Laptop</span><strong>Controller data → C parser</strong><p>The parser reads a line of structured input and accepts it only when all eleven fields are present.</p></li><li><span>02 / Serial</span><strong>One-byte commands</strong><p>The laptop and Arduino-side sketch communicate at 9600 baud using L and R for movement.</p></li><li><span>03 / Display</span><strong>Update the game state</strong><p>The sketch checks the next cell, updates the avatar position, and draws the changed pixels.</p></li></ol>
+<h3 class="design-subheading">My parser: turn an axis value into a direction</h3>
+<p class="case-prose">I used <code>termios</code> to configure the serial connection and <code>sscanf</code> to read the incoming record. The field named <code>rx</code> controls horizontal movement. A dead zone around zero prevents small joystick variations from generating a movement request.</p>
+<table class="case-table design-table"><caption>Input thresholds in the C parser</caption><thead><tr><th scope="col">Component / setting</th><th scope="col">Value and purpose</th></tr></thead><tbody><tr><th scope="row">rx &gt; 0.6</th><td>Send R to request one cell to the right.</td></tr><tr><th scope="row">rx &lt; −0.6</th><td>Send L to request one cell to the left.</td></tr><tr><th scope="row">−0.6 ≤ rx ≤ 0.6</th><td>Send no movement command for that input record.</td></tr></tbody></table>
+<p class="case-prose">Each qualifying record produces one command, so the incoming record rate affects horizontal movement speed. Keeping the protocol small lets the display code work with directions instead of the full controller data format.</p>
+<h3 class="design-subheading">Game logic: one grid, two movement rules</h3>
+<div class="case-grid"><article class="case-card"><h3>Horizontal movement</h3><p>The game stores obstacles in a <code>char MAZE[32][32]</code> array and tracks the avatar separately, starting at column 16, row 0. Before moving left or right, it checks both the display boundary and whether the neighboring cell contains a wall.</p></article><article class="case-card"><h3>Timed gravity</h3><p>A <code>millis()</code> comparison permits a downward step after more than 500 ms, provided the cell below is open. This avoids pausing the whole loop for a half-second delay and keeps serial input available between gravity steps.</p></article></div>
+<p class="case-prose">The initial board is drawn once, with red obstacles and a green avatar. Valid movement clears the old avatar pixel and draws the new one. Adafruit GFX and RGB matrix Panel provide the graphics and panel-control routines; my contribution was the parser and portions of the application’s game code.</p>
+<p class="case-prose">The supplied generator uses a difficulty setting of 50, giving each cell a nominal 50% chance of becoming an obstacle. It creates a random field rather than guaranteeing a solvable route. The custom 3D-printed housing packages the panel as a physical game display.</p>
+</div>
+    </section>
+    <section class="section case-section" aria-labelledby="result">
+      <div class="case-section-label"><span>R</span><p>Result</p></div>
+      <div class="case-section-body"><h2 id="result">A controller-to-game interface</h2><p class="case-prose">My contribution provided the laptop-side command bridge and part of the game logic for the team’s RGB maze project. It connected text-based input processing with serial communication and the game’s movement system.</p></div>
+    </section>
+    <div class="section case-end"><a class="button primary" href="../projects.html">Explore more projects &rarr;</a></div>
+  </main>
+
+  <footer>
+    <p>Designed & built by Sayon Saha.</p>
+    <p>© <span id="year"></span></p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <span>↑</span>
+    <small>TOP</small>
+  </button>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/project-sources.js"></script>
+</body>
+</html>

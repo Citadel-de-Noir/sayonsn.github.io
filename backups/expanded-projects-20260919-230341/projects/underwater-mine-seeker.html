@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A team robotics project using a ground-based CyBot and the TI TM4C123GH6PM microcontroller to simulate a naval mine-search mission." />
+  <title>Underwater Mine Seeker | Sayon Saha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/hobbies.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+  <link rel="stylesheet" href="../css/project-detail.css" />
+</head>
+<body>
+  <a class="skip-case" href="#main-content">Skip to project content</a>
+  <div id="scrollProgress" class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="grid-overlay"></div>
+
+  <header class="site-header">
+    <a class="logo" href="../index.html#home" aria-label="Home">SS<span>.</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="../index.html#home" class="nav-link">Home</a>
+      <a href="../index.html#bio" class="nav-link">Bio</a>
+      <a href="../projects.html" class="nav-link active" aria-current="page">Projects</a>
+      <a href="../courses.html" class="nav-link">Courses</a>
+      <a href="../index.html#experience" class="nav-link">Experience</a>
+      <a href="../organizations.html" class="nav-link">Organizations</a>
+      <a href="../index.html#hobbies" class="nav-link">Hobbies</a>
+      <a href="../index.html#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content" class="case-study case-study-star">
+    <section class="section case-hero" aria-labelledby="project-title">
+      <a class="case-back" href="../projects.html">&larr; All projects</a>
+      <div class="case-hero-grid">
+        <div>
+          <p class="eyebrow">CPRE 288 · Spring 2026</p>
+          <h1 id="project-title">Underwater<br>Mine Seeker<span class="case-title-dot">.</span></h1>
+          <p class="case-lead">Manual control, autonomous decisions, and a scanning sensor head.</p>
+          <p class="case-intro">A team robotics project using a ground-based CyBot and the TI TM4C123GH6PM microcontroller to simulate a naval mine-search mission.</p>
+          <div class="tag-row"><span>Embedded C</span><span>TM4C123GH6PM</span><span>Robot control</span></div>
+          <div class="section-actions"><a class="button secondary project-github" data-project-github="underwater-mine-seeker" role="link" aria-disabled="true">GitHub · Coming soon</a></div>
+        </div>
+        <figure class="case-scan">
+          <img src="../assets/images/mine-seeker-scan.svg" width="560" height="400" alt="Polar diagram of a recorded target at 121 degrees and 25.75 centimeters." />
+          <figcaption>A recorded scan, illustrated from the robot’s telemetry.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section case-section" aria-labelledby="situation">
+      <div class="case-section-label"><span>S</span><p>Situation</p></div>
+      <div class="case-section-body"><h2 id="situation">Searching a simulated minefield</h2><p class="case-prose">Our CPRE 288 team built a robot to explore a course containing obstacles and simulated mine targets. It needed to support both operator control and autonomous navigation.</p></div>
+    </section>
+    <section class="section case-section" aria-labelledby="task">
+      <div class="case-section-label"><span>T</span><p>Task</p></div>
+      <div class="case-section-body"><h2 id="task">Connect sensing to behavior</h2><p class="case-prose">I was responsible for the main program, movement routines, and behavior logic in both operating modes. My work also covered the timer, scan, ultrasonic ping, and servo modules.</p></div>
+    </section>
+    <section class="section case-section" aria-labelledby="action">
+      <div class="case-section-label"><span>A</span><p>Action</p></div>
+      <div class="case-section-body"><h2 id="action">Coordinate movement and scanning</h2><p class="case-prose">I implemented manual driving and autonomous decisions for scanning, investigating targets, choosing gaps, and recovering from bump or cliff detections. I integrated servo positioning, ultrasonic ranging, and timing with the main control loop, including stop requests and manual takeover. These pieces worked alongside teammates’ modules and course-provided utilities.</p></div>
+    </section>
+    <section class="section case-section" aria-labelledby="result">
+      <div class="case-section-label"><span>R</span><p>Result</p></div>
+      <div class="case-section-body"><h2 id="result">A combined control and sensing implementation</h2><p class="case-prose">The final firmware brought manual and autonomous behavior together with the scanning system. A saved scan reported a target at 121°, about 25.75 cm away, with an estimated width of 4.51 cm—concrete evidence of the sensing pipeline producing target data.</p></div>
+    </section>
+    <div class="section case-end"><a class="button primary" href="../projects.html">Explore more projects &rarr;</a></div>
+  </main>
+
+  <footer>
+    <p>Designed & built by Sayon Saha.</p>
+    <p>© <span id="year"></span></p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <span>↑</span>
+    <small>TOP</small>
+  </button>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/project-sources.js"></script>
+</body>
+</html>
